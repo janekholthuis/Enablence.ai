@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
@@ -7,169 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --brand-dark: #0f172a;
-        --brand-blue: #1e40af;
-        --brand-accent: #60a5fa;
-        --money: #4caf50;
-        --db-color: #f59e0b;
-        --wa-color: #25d366;
-        --dash-color: #3b82f6;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #ffffff;
-        color: var(--brand-dark);
-        -webkit-font-smoothing: antialiased;
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(15, 23, 42, 0.05);
-      }
-      
-      /* Scroll Reveal */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Infinite Logo Scroll */
-      @keyframes scroll {
-        to { transform: translateX(-50%); }
-      }
-      .animate-scroll {
-        animation: scroll 40s linear infinite;
-      }
-      
-      /* Rotations */
-      @keyframes spin-slow {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .animate-spin-slow {
-        animation: spin-slow 60s linear infinite;
-      }
-      .animate-spin-slow-reverse {
-        animation: spin-slow 40s linear infinite reverse;
-      }
-
-      /* Data Flow Animation */
-      @keyframes flow {
-        to { stroke-dashoffset: 0; }
-      }
-      .animate-flow {
-        stroke-dasharray: 8 8;
-        stroke-dashoffset: 16;
-        animation: flow 1.5s linear infinite;
-      }
-
-      /* Backoffice Animation - Provided Inspiration */
-      @keyframes backoffice-process {
-        0% { left: 5%; opacity: 0; transform: scale(0.5); }
-        10% { opacity: 1; transform: scale(1.2); }
-        30% { left: 40%; opacity: 1; transform: scale(1); }    
-        35%, 45% { 
-            left: 40%; 
-            transform: scale(0.8); 
-        }
-        60% {
-          left: 65%;
-          opacity: 1;
-          transform: scale(1);
-          text-shadow: 0 -60px 0 var(--wa-color), 0 60px 0 var(--dash-color);
-          color: transparent;
-        }
-        85% {
-          left: 80%;
-          opacity: 1;
-          text-shadow: 0 -75px 10px var(--wa-color), 0 75px 10px var(--dash-color);
-        }
-        100% {
-          left: 95%;
-          opacity: 0;
-          text-shadow: 0 -75px 20px var(--wa-color), 0 75px 20px var(--dash-color);
-        }
-      }
-      .backoffice-money {
-        position: absolute;
-        font-size: 1.5rem;
-        left: -50px;
-        opacity: 0;
-        z-index: 50;
-        animation: backoffice-process 5s infinite cubic-bezier(0.45, 0, 0.55, 1);
-      }
-
-      /* Particle Flows for other modules */
-      @keyframes particle-orbit {
-        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); opacity: 0; }
-        10% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); opacity: 0; }
-      }
-      .particle-crm { animation: particle-orbit 4s linear infinite; }
-      
-      /* Visualization Node */
-      .vis-container {
-        background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
-        border-radius: 2rem;
-        position: relative;
-        overflow: hidden;
-        border: 1px solid #1e293b;
-        box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
-      }
-      .vis-node {
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        border: 1px solid #334155;
-        border-radius: 0.75rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        z-index: 10;
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.7);
-        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-      .reveal.active .vis-node {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-      }
-      .vis-node span {
-        font-size: 0.55rem;
-        font-weight: 800;
-        color: #94a3b8;
-        text-transform: uppercase;
-        margin-top: 4px;
-        text-align: center;
-      }
-
-      /* Custom Shadows */
-      .shadow-premium {
-        box-shadow: 0 20px 50px -12px rgba(15, 23, 42, 0.12);
-      }
-
-      /* Dashboards Micro-elements */
-      .dash-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(4px);
-        border-radius: 12px;
-        padding: 10px;
-        color: white;
-      }
-
-      /* Smooth text-wrap */
-      h1, h2, h3 { text-wrap: balance; }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
 </head>
 <body class="overflow-x-hidden selection:bg-blue-950 selection:text-white">
 
@@ -179,8 +19,7 @@
             <a href="#" class="flex items-center gap-3">
                 <img src="https://onecdn.io/media/1ab823e5-315d-4072-acef-8e6178d684c0/md2x" alt="Enablence" class="h-8 md:h-9 w-auto brightness-0" />
                 <div class="flex flex-col">
-                    <span class="text-lg md:text-xl font-black tracking-tighter text-slate-900 leading-none">ENABLENCE</span>
-                    <span class="text-[8px] md:text-[9px] font-bold text-blue-600 tracking-[0.3em] uppercase">AI Systems</span>
+                
                 </div>
             </a>
             <div class="hidden lg:flex items-center gap-10">
@@ -209,11 +48,11 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col justify-center bg-white pt-24 md:pt-0 overflow-hidden">
+    <section class="relative min-h-screen flex flex-col justify-center bg-white pt-28 md:pt-32 overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-4">
                 <div class="w-full lg:w-[55%] text-left reveal active">
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] mb-8 tracking-tighter text-slate-900">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-8 tracking-tighter text-slate-900">
                         Wir automatisieren <br />
                         <span class="text-blue-700">Performance Agenturen</span>
                     </h1>
@@ -246,8 +85,7 @@
                 <div class="w-full lg:w-[45%] relative flex justify-center lg:justify-end reveal delay-300">
                     <div class="relative w-full max-w-[450px] lg:max-w-none h-[300px] sm:h-[450px] lg:h-[750px] flex items-end justify-center lg:justify-end">
                         <div class="relative flex items-end -space-x-16 sm:-space-x-32 group grayscale hover:grayscale-0 transition-all duration-1000">
-                            <img src="https://onecdn.io/media/c6adf223-bb29-4581-8604-afc25e94a1f6/sm2x" alt="Leon Schmid" class="h-full w-auto object-contain transform transition-transform duration-700 group-hover:-translate-y-2" loading="eager">
-                            <img src="https://onecdn.io/media/75ba0de9-9867-414e-a6ba-73dc01b04751/sm2x" alt="Janek Holthuis" class="h-[105%] w-auto object-contain z-10 transform translate-x-2 transition-transform duration-700 group-hover:-translate-y-4" loading="eager">
+                            <img src="https://onecdn.io/media/1f0c3232-c07e-4db1-9ad5-d7f619c4fc71/full" alt="Leon Schmid" class="h-full w-auto object-contain transform transition-transform duration-700 group-hover:-translate-y-2" loading="eager">
                         </div>
                         <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
                     </div>
@@ -257,22 +95,24 @@
         
         <!-- Tool Slider -->
         <div class="bg-white border-y border-slate-100 py-6 md:py-10 overflow-hidden relative">
-            <div class="flex w-[200%] animate-scroll">
+        <div class="flex w-[200%]">
                 <div class="flex w-full justify-around items-center opacity-40 grayscale">
-                    <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Zapier">
-                    <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Make">
-                    <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Airtable">
-                    <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Notion">
-                    <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="OpenAI">
-                    <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Anthropic">
+                    <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" class="h-6 md:h-8 px-8" alt="Make.com">
+                    <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" class="h-6 md:h-8 px-8" alt="Airtable">
+                    <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" class="h-6 md:h-8 px-8" alt="OpenAI">
+                    <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" class="h-6 md:h-8 px-8" alt="Close">
+                    <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" class="h-6 md:h-8 px-8" alt="Langdock">
+                    <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" class="h-6 md:h-8 px-8" alt="n8n">
+                    <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" class="h-6 md:h-8 px-8" alt="Claude">
                 </div>
                 <div class="flex w-full justify-around items-center opacity-40 grayscale">
-                    <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Zapier">
-                    <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Make">
-                    <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Airtable">
-                    <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Notion">
-                    <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="OpenAI">
-                    <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg" class="h-6 md:h-8 px-8" alt="Anthropic">
+                    <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" class="h-6 md:h-8 px-8" alt="Make.com">
+                    <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" class="h-6 md:h-8 px-8" alt="Airtable">
+                    <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" class="h-6 md:h-8 px-8" alt="OpenAI">
+                    <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" class="h-6 md:h-8 px-8" alt="Close">
+                    <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" class="h-6 md:h-8 px-8" alt="Langdock">
+                    <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" class="h-6 md:h-8 px-8" alt="n8n">
+                    <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" class="h-6 md:h-8 px-8" alt="Claude">
                 </div>
             </div>
             <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
@@ -320,7 +160,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-16 md:gap-24">
                 <div class="w-full lg:w-1/2 reveal">
                     <h2 class="text-blue-500 font-bold tracking-[0.4em] uppercase text-xs mb-6">Was wir machen</h2>
-                    <h3 class="text-3xl md:text-6xl lg:text-7xl font-black mb-10 text-blue-950 tracking-tighter leading-tight">
+                    <h3 class="text-3xl md:text-6xl lg:text-xl font-black mb-10 text-blue-950 tracking-tighter leading-tight">
                         Wir erschaffen dir deine <span class="text-blue-700">AI-Infrastruktur</span>, die jede Zahl deiner Agentur kennt und dir einen unfairen Wettbewerbsvorteil verschafft.
                     </h3>
                     <p class="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed font-light">
@@ -337,8 +177,8 @@
                     <div class="relative w-full aspect-square bg-slate-50 rounded-[2.5rem] md:rounded-[3.5rem] border border-slate-100 shadow-2xl shadow-slate-200 overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
                         
-                        <div class="absolute w-[85%] h-[85%] border border-slate-200 rounded-full opacity-60 animate-spin-slow"></div>
-                        <div class="absolute w-[55%] h-[55%] border border-slate-200 rounded-full opacity-60 animate-spin-slow-reverse"></div>
+                        <div class="absolute w-[85%] h-[85%] border border-slate-200 rounded-full opacity-60"></div>
+                        <div class="absolute w-[55%] h-[55%] border border-slate-200 rounded-full opacity-60"></div>
                         
                         <svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
                             <line x1="50%" y1="50%" x2="85%" y2="50%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
@@ -350,20 +190,19 @@
                             <line x1="50%" y1="50%" x2="71.8%" y2="22.7%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
                         </svg>
                 
-                        <div class="relative z-20 w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center justify-center p-6 animate-pulse">
-                            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg" alt="Airtable" class="w-full h-full object-contain" />
+                        <div class="relative z-20 w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center justify-center p-6">
+                            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" alt="Airtable" class="w-full h-full object-contain" />
                             <div class="absolute -bottom-8 text-xs font-bold uppercase tracking-widest text-blue-400">Core</div>
                         </div>
                 
                         <!-- Orbiting Nodes -->
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 50%; left: 85%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 77.3%; left: 71.8%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 84.1%; left: 42.2%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 65.2%; left: 18.5%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 34.8%; left: 18.5%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 15.9%; left: 42.2%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 22.7%; left: 71.8%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg" class="w-full h-full object-contain"></div>
-                    </div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 50%; left: 85%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" class="w-full h-full object-contain"></div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 77.3%; left: 71.8%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" class="w-full h-full object-contain"></div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 84.1%; left: 42.2%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" class="w-full h-full object-contain"></div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 65.2%; left: 18.5%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" class="w-full h-full object-contain"></div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 34.8%; left: 18.5%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" class="w-full h-full object-contain"></div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 22.7%; left: 71.8%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" class="w-full h-full object-contain"></div>
+                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 15.9%; left: 42.2%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/id6Zq084G_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1725260983764" class="w-full h-full object-contain"></div> </div>
                 </div>
             </div>
         </div>
@@ -397,43 +236,144 @@
                             <span class="text-lg font-black text-slate-900">höhere Close-Rate, mehr Anwahlen & Termine</span>
                         </div>
                     </div>
-                    <div class="order-1 lg:order-2 vis-container aspect-video overflow-hidden">
-                        <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] [background-size:20px_20px]"></div>
-                        <div class="absolute top-[20%] left-[10%] opacity-20"><i data-lucide="file-text" class="text-slate-500 w-32 h-32"></i></div>
-                        
-                        <!-- AI BRAIN -->
-                        <div class="vis-node" style="width: 120px; height: 120px; top: 50%; left: 50%; border-color: #60a5fa; background: radial-gradient(circle, #1e40af 0%, #0f172a 100%); z-index: 20;">
-                            <i data-lucide="brain-circuit" class="text-blue-400 w-12 h-12 animate-pulse"></i>
-                            <span class="text-[8px] text-white">AI Lead Sorter</span>
-                        </div>
+                    <div class="order-1 lg:order-2 vis-container aspect-video">
+<div class="txFlow">
+  <div class="flow">
+    <!-- LEFT -->
+    <div class="leftCol">
+      <div class="node">
+       
+<div class="icon">
+            <img src="https://cdn.brandfetch.io/id6nzBRubZ/w/64/h/64/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1717513360815" alt="Airtable" />
+          </div>        <div class="text">
+            <div class="label">Neuer Lead</div>
+          <div class="value">Perspective</div>
+        </div>
+      </div>
+    </div>
 
-                        <!-- Orbiting particles -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="particle-crm absolute w-4 h-4 bg-green-500/40 rounded-full blur-[1px] shadow-[0_0_10px_#22c55e]"></div>
-                            <div class="particle-crm absolute w-3 h-3 bg-blue-500/40 rounded-full blur-[1px] shadow-[0_0_10px_#3b82f6]" style="animation-delay: -1.3s;"></div>
-                            <div class="particle-crm absolute w-5 h-5 bg-amber-500/40 rounded-full blur-[1px] shadow-[0_0_10px_#f59e0b]" style="animation-delay: -2.6s;"></div>
-                        </div>
+    <!-- MIDDLE WIRES -->
+    <div class="wires" aria-hidden="true">
+      <div class="wire main"></div>
+      <div class="wire branchVTop"></div>
+      <div class="wire branchHTop"></div>
+      <div class="wire branchVBot"></div>
+      <div class="wire branchHBot"></div>
 
-                        <div class="vis-node" style="width: 65px; height: 65px; top: 20%; left: 80%; border-color: #22c55e;"><i data-lucide="star" class="text-green-400 w-6 h-6"></i><span class="text-[6px]">High Pri</span></div>
-                        <div class="vis-node" style="width: 65px; height: 65px; top: 80%; left: 80%; opacity: 0.7;"><i data-lucide="archive" class="text-slate-400 w-6 h-6"></i><span class="text-[6px]">Archived</span></div>
+      <div class="particle p-main"></div>
+      <div class="particle p-top"></div>
+      <div class="particle p-bot"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="rightCol">
+      <div class="rightStack">
+    
+
+        <div class="node">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/id2K-M_V2y/w/1152/h/1152/theme/dark/symbol.png?c=1bxid64Mup7aczewSAYMX&t=1720167201927" alt="WhatsApp" />
+          </div>
+          <div class="text">
+            <div class="label">CRM</div>
+            <div class="value">Close.com</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon" style="border-radius:999px;">
+            <img src="https://cdn.brandfetch.io/id6Zq084G_/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1725260972427" alt="Lexoffice" style="border-radius:999px;" />
+          </div>
+          <div class="text">
+            <div class="label">Notification</div>
+            <div class="value">WhatsApp</div>
+          </div>
+        </div>
+         <div class="node pulse">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1675163448780" alt="Airtable" />
+          </div>
+          <div class="text">
+            <div class="label">Database</div>
+            <div class="value">CEO Dashboard</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
                     </div>
                 </div>
 
                 <!-- Modul 2: Fulfillment -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
                     <div class="vis-container aspect-video">
-                        <div class="absolute inset-0 opacity-10"><svg class="w-full h-full"><pattern id="grid-ful" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern><rect width="100%" height="100%" fill="url(#grid-ful)" /></svg></div>
-                        <svg class="vis-connector">
-                            <path d="M 20% 30% L 50% 50% M 20% 70% L 50% 50%" stroke="white" stroke-opacity="0.1" stroke-width="2" class="animate-flow" />
-                            <path d="M 50% 50% L 80% 50%" stroke="white" stroke-opacity="0.1" stroke-width="2" class="animate-flow" />
-                        </svg>
-                        
-                        <div class="vis-node" style="width: 70px; height: 70px; top: 30%; left: 20%;"><i data-lucide="form-input" class="text-blue-400 w-6 h-6"></i><span class="text-[6px]">Onboarding</span></div>
-                        <div class="vis-node" style="width: 70px; height: 70px; top: 70%; left: 20%;"><i data-lucide="mic-2" class="text-blue-400 w-6 h-6"></i><span class="text-[6px]">Call Intel</span></div>
-                        
-                        <div class="vis-node" style="width: 130px; height: 100px; top: 50%; left: 50%; border-color: #60a5fa;"><i data-lucide="database" class="text-blue-400 w-10 h-10 animate-spin-slow"></i><span class="text-[8px] text-white">Ops Engine</span></div>
-                        
-                        <div class="vis-node" style="width: 80px; height: 80px; top: 50%; left: 80%;"><i data-lucide="check-square" class="text-green-400 w-8 h-8"></i><span class="text-[6px]">Done</span></div>
+                     
+
+<div class="txFlow">
+  <div class="flow">
+    <!-- LEFT -->
+    <div class="leftCol">
+      <div class="node">
+       
+<div class="icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/960px-Google_Meet_icon_%282020%29.svg.png" alt="Airtable" />
+          </div>        <div class="text">
+          <div class="label">Neuer Kunde</div>
+          <div class="value">Kick-Off ✅</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIDDLE WIRES -->
+    <div class="wires" aria-hidden="true">
+      <div class="wire main"></div>
+      <div class="wire branchVTop"></div>
+      <div class="wire branchHTop"></div>
+      <div class="wire branchVBot"></div>
+      <div class="wire branchHBot"></div>
+
+      <div class="particle p-main"></div>
+      <div class="particle p-top"></div>
+      <div class="particle p-bot"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="rightCol">
+      <div class="rightStack">
+        <div class="node pulse">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/idW5s392j1/w/338/h/338/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1738315794862" alt="Airtable" />
+          </div>
+          <div class="text">
+            <div class="label">AI</div>
+            <div class="value">Werbeinhalte</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon">
+            <img src="https://static.thenounproject.com/png/2837107-200.png" alt="WhatsApp" />
+          </div>
+          <div class="text">
+            <div class="label">Kundenportal</div>
+            <div class="value">Feedback Abfrage</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon" style="border-radius:999px;">
+            <img src="https://cdn.brandfetch.io/idWvz5T3V7/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1691142640809" alt="Lexoffice" style="border-radius:999px;" />
+          </div>
+          <div class="text">
+            <div class="label">Kampagne</div>
+            <div class="value">Aut. Meta Upload</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
                     </div>
                     <div class="bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
                         <div class="flex items-start justify-between mb-8">
@@ -474,44 +414,139 @@
                         </div>
                     </div>
                     <div class="order-1 lg:order-2 vis-container aspect-video">
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#1e40af10,transparent_70%)]"></div>
-                        <!-- Radar Sweep -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-[80%] h-[80%] border border-blue-500/20 rounded-full animate-ping" style="animation-duration: 4s;"></div>
-                        </div>
+<div class="txFlow">
+  <div class="flow">
+    <!-- LEFT -->
+    <div class="leftCol">
+      <div class="node">
+       
+<div class="icon">
+            <img src="https://cdn.brandfetch.io/idIuHSxm49/w/240/h/240/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1700421804530" alt="Airtable" />
+          </div>        <div class="text">
+          <div class="label">Web Scraping</div>
+          <div class="value">Kontaktrecherche</div>
+        </div>
+      </div>
+    </div>
 
-                        <div class="vis-node" style="width: 80px; height: 80px; top: 50%; left: 20%;"><i data-lucide="search" class="text-blue-400 w-8 h-8"></i><span class="text-[6px]">Discovery</span></div>
-                        <div class="vis-node" style="width: 140px; height: 110px; top: 50%; left: 55%; border-color: #60a5fa;"><i data-lucide="cpu" class="text-blue-400 w-10 h-10 animate-pulse"></i><span class="text-[8px] text-white">AI Enrichment</span></div>
-                        <div class="vis-node" style="width: 70px; height: 70px; top: 50%; left: 85%; border-color: #60a5fa;"><i data-lucide="send" class="text-blue-400 w-6 h-6"></i><span class="text-[6px]">Mailing</span></div>
+    <!-- MIDDLE WIRES -->
+    <div class="wires" aria-hidden="true">
+      <div class="wire main"></div>
+      <div class="wire branchVTop"></div>
+      <div class="wire branchHTop"></div>
+      <div class="wire branchVBot"></div>
+      <div class="wire branchHBot"></div>
+
+      <div class="particle p-main"></div>
+      <div class="particle p-top"></div>
+      <div class="particle p-bot"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="rightCol">
+      <div class="rightStack">
+        <div class="node pulse">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/light/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1749527480180" alt="Airtable" />
+          </div>
+          <div class="text">
+            <div class="label">Database</div>
+            <div class="value">AI Enrichment</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/idlwotiiZv/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1762052262320" alt="WhatsApp" />
+          </div>
+          <div class="text">
+            <div class="label">Skalierbares Setup</div>
+            <div class="value">Cold Mailing</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon" style="border-radius:999px;">
+        <div class="icon" aria-hidden="true"><div class="moneyEmoji">💸</div></div>
+          </div>
+          <div class="text">
+            <div class="label">Neue Leads</div>
+            <div class="value">Abschlüsse</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
                     </div>
                 </div>
 
                 <!-- Modul 4: Dashboards -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
-                    <div class="vis-container aspect-video flex items-center justify-center p-6">
-                        <div class="relative w-full h-full border border-white/10 rounded-2xl bg-slate-900/40 backdrop-blur-md p-6 overflow-hidden">
-                            <div class="flex justify-between items-center mb-6">
-                                <div class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Global Cockpit v.2.5</div>
-                                <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_#ef4444]"></div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="dash-card">
-                                    <div class="text-[8px] text-slate-500 uppercase font-bold">Revenue</div>
-                                    <div class="text-xl font-black text-white">€142,400</div>
-                                    <div class="mt-2 text-[8px] text-green-400">↑ 12.4% vs prev</div>
-                                </div>
-                                <div class="dash-card">
-                                    <div class="text-[8px] text-slate-500 uppercase font-bold">LTV/CAC</div>
-                                    <div class="text-xl font-black text-white">8.4x</div>
-                                    <div class="mt-2 text-[8px] text-blue-400">Excellent Efficiency</div>
-                                </div>
-                                <div class="col-span-2 dash-card h-16 flex items-center">
-                                    <svg class="w-full h-full" viewBox="0 0 300 40">
-                                        <polyline points="0,35 30,32 60,34 90,10 120,15 150,5 180,22 210,12 240,18 270,4 300,10" fill="none" stroke="var(--brand-accent)" stroke-width="2" class="animate-flow" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="vis-container aspect-video">
+<div class="txFlow txFlow--rev">
+  <div class="flow">
+    <!-- LEFT (3 sources) -->
+    <div class="leftCol">
+      <div class="leftStack">
+        <div class="node pulse">
+                 <div class="icon" aria-hidden="true"><div class="moneyEmoji">💸</div></div>
+
+          <div class="text">
+            <div class="label">CRM</div>
+            <div class="value">Sales-Daten</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/idxPi2Evsk/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1668515642970" alt="WhatsApp" />
+          </div>
+          <div class="text">
+            <div class="label">Projektmanagement</div>
+            <div class="value">Fulfillment-KPIs</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon" style="border-radius:999px;">
+            <img src="https://cdn.brandfetch.io/idz4Sdtuy7/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1758355288092" alt="Lexoffice" style="border-radius:999px;" />
+          </div>
+          <div class="text">
+            <div class="label">Buchhaltung</div>
+            <div class="value">Back-Office Zahlen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIDDLE WIRES -->
+    <div class="wires" aria-hidden="true">
+      <div class="wire main"></div>
+      <div class="wire branchVTop"></div>
+      <div class="wire branchHTop"></div>
+      <div class="wire branchVBot"></div>
+      <div class="wire branchHBot"></div>
+
+      <div class="particle p-main"></div>
+      <div class="particle p-top"></div>
+      <div class="particle p-bot"></div>
+    </div>
+
+    <!-- RIGHT (single sink) -->
+    <div class="rightCol">
+      <div class="node">
+                <div class="icon" aria-hidden="true"><div class="moneyEmoji">📊</div></div>
+
+        <div class="text">
+          <div class="label">24/7 per Handy</div>
+          <div class="value">CEO Dashboard</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
                     </div>
                     <div class="bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
                         <div class="flex items-start justify-between mb-8">
@@ -550,26 +585,72 @@
                         </div>
                     </div>
                     <div class="order-1 lg:order-2 vis-container aspect-video">
-                        <div class="backoffice-money">💵</div>
-                        
-                        <!-- Source Label -->
-                        <div class="absolute left-[5%] top-[50%] -translate-y-1/2 text-[8px] text-slate-500 font-black uppercase text-center leading-tight">Incoming<br>Transaction</div>
+                      <!-- ANIMATION HERE -->
 
-                        <!-- Central Node -->
-                        <div class="vis-node" style="width: 100px; height: 120px; top: 50%; left: 45%; border: 3px solid var(--db-color); box-shadow: 0 0 30px rgba(245, 158, 11, 0.2);">
-                            <div style="font-size: 1.5rem; margin-bottom: 5px;">🗄️</div>
-                            <span class="text-white" style="font-size: 0.65rem; color: var(--db-color);">DATABASE</span>
-                        </div>
+<div class="txFlow">
+  <div class="flow">
+    <!-- LEFT -->
+    <div class="leftCol">
+      <div class="node">
+       
+        <div class="icon" aria-hidden="true"><div class="moneyEmoji">💸</div></div>
+        <div class="text">
+          <div class="label">Rechnung bezahlt</div>
+          <div class="value">Geldeingang</div>
+        </div>
+      </div>
+    </div>
 
-                        <!-- Destinations -->
-                        <div class="absolute right-[10%] top-0 bottom-0 flex flex-col justify-center gap-16">
-                            <div class="vis-node" style="position: relative; width: 110px; height: 60px; transform: none; left: auto; top: auto; border-left: 5px solid var(--wa-color); opacity: 1;">
-                                <div class="flex items-center gap-2"><span style="font-size: 1rem;">💬</span><span class="text-[8px] text-white">WhatsApp</span></div>
-                            </div>
-                            <div class="vis-node" style="position: relative; width: 110px; height: 60px; transform: none; left: auto; top: auto; border-left: 5px solid var(--dash-color); opacity: 1;">
-                                <div class="flex items-center gap-2"><span style="font-size: 1rem;">📊</span><span class="text-[8px] text-white">CEO Dash</span></div>
-                            </div>
-                        </div>
+    <!-- MIDDLE WIRES -->
+    <div class="wires" aria-hidden="true">
+      <div class="wire main"></div>
+      <div class="wire branchVTop"></div>
+      <div class="wire branchHTop"></div>
+      <div class="wire branchVBot"></div>
+      <div class="wire branchHBot"></div>
+
+      <div class="particle p-main"></div>
+      <div class="particle p-top"></div>
+      <div class="particle p-bot"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="rightCol">
+      <div class="rightStack">
+        <div class="node pulse">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1675163448780" alt="Airtable" />
+          </div>
+          <div class="text">
+            <div class="label">Database</div>
+            <div class="value">Airtable</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon">
+            <img src="https://cdn.brandfetch.io/id6Zq084G_/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1725260972427" alt="WhatsApp" />
+          </div>
+          <div class="text">
+            <div class="label">Notification</div>
+            <div class="value">WhatsApp</div>
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="icon" style="border-radius:999px;">
+            <img src="https://cdn.brandfetch.io/iddJ8DlE05/w/2048/h/2048/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1765362977466" alt="Lexoffice" style="border-radius:999px;" />
+          </div>
+          <div class="text">
+            <div class="label">Buchhaltung</div>
+            <div class="value">Lexoffice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -581,7 +662,7 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
                 <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Ergebnisse</h2>
-                <h3 class="text-3xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">Lass KI für dich arbeiten.</h3>
+                <h3 class="text-2xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight">Lass KI für dich arbeiten.</h3>
                 <p class="text-lg md:text-2xl text-slate-500 mt-8 font-light leading-relaxed max-w-2xl mx-auto">Routinetätigkeiten laufen automatisch, Personalkosten sinken drastisch und deine Rendite steigt.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -614,7 +695,7 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
                 <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Das Team</h2>
-                <h3 class="text-3xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">Über uns.</h3>
+                <h3 class="text-2xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight">Über uns.</h3>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
@@ -631,7 +712,8 @@
                     <div class="bg-white rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-premium relative group">
                         <img src="https://onecdn.io/media/c6adf223-bb29-4581-8604-afc25e94a1f6/sm2x" alt="Leon Schmid" class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                         <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent">
-                            <div class="text-white font-black text-xl md:text-2xl">Leon Schmid</div>
+                            <div class="text-
+                             font-black text-xl md:text-2xl">Leon Schmid</div>
                             <div class="text-blue-300 text-xs font-bold uppercase tracking-widest">Founder & Geschäftsführer</div>
                         </div>
                     </div>
@@ -654,7 +736,7 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
                 <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Resultate</h2>
-                <h3 class="text-3xl md:text-7xl font-black text-slate-900 tracking-tighter">Case Studies.</h3>
+                <h3 class="text-2xl md:text-6xl font-black text-slate-900 tracking-tighter">Case Studies.</h3>
             </div>
 
             <div class="flex flex-col gap-12 md:gap-16 max-w-7xl mx-auto">
@@ -662,23 +744,23 @@
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                         <div class="lg:col-span-8 flex flex-col justify-between">
                             <div>
-                                <img src="https://onecdn.io/media/839c1e1d-af8e-454b-84c8-49f45e3de1ec/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Logo">
-                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Prozess Strukturierung:<br />Quadratmeter Marketing</h4>
+                                <img src="https://onecdn.io/media/839c1e1d-af8e-454b-84c8-49f45e3de1ec/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Quadratmeter Marketing">
+                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Prozess Strukturierung der Agentur "Quadratmeter Marketing"</h4>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
                                     <div>
                                         <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Herausforderung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Kaum standardisierte Prozesse – viele Aufgaben manuell. Aufwand pro Task hoch, wertvolle Zeit für das Kerngeschäft ging verloren.</p>
+                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Kaum standardisierte Prozesse – viele Aufgaben manuell. Aufwand pro Task hoch, wertvolle Zeit für das Kerngeschäft ging verloren, Entscheidungen ohne belastbare Daten, kein funktionierendes Tracking, fehlende Systeme im Vertrieb. Kundenonboarding sehr aufwendig.</p>
                                     </div>
                                     <div>
                                         <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Lösung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Zentrales CRM-System, automatisch Call-Auswertung, digitalisiertes Backoffice-Management und Echtzeit-Dashboards.</p>
+                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Zentrales CRM-System mit Lead-Scoring, automatischer Auswertung von Calls, vollständig digitalisiertes Vertrags-, Rechnungs- und Backoffice-Management. Zusätzlich automatisiertes Onboarding von Kunden und Mitarbeitern. Entwicklung von Echtzeit-Dashboards, für Abbildung sämtlicher Unternehmens-KPIs.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="pt-8 border-t border-slate-200 flex items-center gap-5">
-                                <img src="https://onecdn.io/media/51c85131-0d9c-4c63-9047-9b1897fc96ad/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Maximilian">
+                                <img src="https://onecdn.io/media/51c85131-0d9c-4c63-9047-9b1897fc96ad/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Maximilian Quos">
                                 <div>
-                                    <p class="text-slate-900 font-bold italic mb-1">"Die Jungs sind einfach Maschinen."</p>
+                                    <p class="text-slate-900 font-bold italic mb-1">"Die Jungs sind einfach Maschinen wenn es darum geht Systeme zu bauen die uns enorm nach vorne bringen."</p>
                                     <div class="text-sm font-black text-slate-900">Maximilian Quos</div>
                                     <div class="text-xs text-slate-400 uppercase tracking-widest">Geschäftsführer</div>
                                 </div>
@@ -687,14 +769,89 @@
                         <div class="lg:col-span-4">
                             <div class="bg-blue-950 h-full min-h-[220px] rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
                                 <div class="relative z-10">
-                                    <div class="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-none">+ 100k</div>
-                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">Mehrumsatz p.m. generiert</p>
+                                    <div class="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-none">+ 100.000 €</div>
+                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">Mehrumsatz jeden Monat generiert während mehrmonatiger Begleitung und Betreuung.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Other case studies omitted for brevity but remain 1:1 in the final render -->
+
+                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 reveal shadow-premium">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                        <div class="lg:col-span-8 flex flex-col justify-between">
+                            <div>
+                                <img src="https://onecdn.io/media/1709af8a-fec4-4ba3-8f33-8fb61460318c/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Erfolg mit Immobilien">
+                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Struktur für Projektentwickler "Erfolg mit Immobilien"</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+                                    <div>
+                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Herausforderung</h5>
+                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Kein funktionierendes Vertriebssystem, zu wenig Vertriebspartner. Viele manuelle Abläufe, kein strukturiertes Onboarding, keine Auswertungen. Hoher Aufwand in Beratung und Finanzierungsvorbereitung.</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Lösung</h5>
+                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Aufbau eines leistungsstarken CRMs mit klarer Struktur. Automatisierte Gewinnung neuer Vertriebspartner durch Lead-Scraping & Cold-Mailing-Kampagnen. Vollautomatisches Onboarding mit Vertragsversand, Follow-ups und Aufgabenmanagement. Zudem neuer Flow für Kundenselbstauskunft und Datenaufbereitung für Finanzierungen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-8 border-t border-slate-200 flex items-center gap-5">
+                                <img src="https://onecdn.io/media/c6a231ef-c791-4900-b9d9-4176411951ba/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Chris Matthewes">
+                                <div>
+                                    <p class="text-slate-900 font-bold italic mb-1">"Mir war vorher nicht bewusst, was sich alles automatisieren lässt. Wir haben enorm an Effizienz und Geschwindigkeit in unserem Tagesgeschäft gewonnen"</p>
+                                    <div class="text-sm font-black text-slate-900">Chris Matthewes</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Geschäftsführer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4">
+                            <div class="bg-blue-950 h-full min-h-[220px] rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
+                                <div class="relative z-10">
+                                    <div class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter leading-none">+ 50</div>
+                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">neue Vertriebspartner</p>
+                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs mt-3">Innerhalb von wenigen Monaten</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 reveal shadow-premium">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                        <div class="lg:col-span-8 flex flex-col justify-between">
+                            <div>
+                                <img src="https://onecdn.io/media/be720de7-eb26-45a9-9500-5598aa970ed7/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Online Steuerrechner">
+                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Online Steuerrechner für Lead Generierung und Qualifizierung</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+                                    <div>
+                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Herausforderung</h5>
+                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Zu viele unqualifizierte Leads.</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Lösung</h5>
+                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Entwicklung eines digitalen GmbH-Steuerrechners, der auf Basis der Nutzereingaben die individuellen steuerlichen Vorteile einer GmbH-Gründung berechnet. Dadurch entsteht ein wirkungsvolles Instrument zur Lead-Generierung und gleichzeitig zur Qualifizierung: Nur passende und ernsthafte Interessenten gelangen in das Erstgespräch.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-8 border-t border-slate-200 flex items-center gap-5">
+                                <img src="https://onecdn.io/media/408e3de6-aadb-4dda-ac15-cac20c38d29e/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Lukas Janik">
+                                <div>
+                                    <p class="text-slate-900 font-bold italic mb-1">"Einfach nur starke Arbeit. Wir bekommen viel Lob von Steuerexperten aus der Branche und die Qualtität unserer Erstgespräche hat sich drastisch verbessert."</p>
+                                    <div class="text-sm font-black text-slate-900">Lukas Janik</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Gründer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4">
+                            <div class="bg-blue-950 h-full min-h-[220px] rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
+                                <div class="relative z-10">
+                                    <div class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter leading-none">- 43 %</div>
+                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">unqualifizierte Erstgespräche</p>
+                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs mt-3">nach Einsatz des Rechners.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -705,7 +862,7 @@
             <div class="bg-slate-900 rounded-[3rem] md:rounded-[5rem] p-12 md:p-32 text-center shadow-2xl relative overflow-hidden reveal">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1e40af20,transparent_50%)]"></div>
                 <div class="relative z-10 max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-8xl font-black text-white mb-8 md:mb-12 tracking-tighter leading-[1.05]">Bereit für ein System, das skaliert?</h2>
+                    <h2 class="text-2xl md:text-6xl lg:text-7xl font-black text-white mb-8 md:mb-12 tracking-tighter leading-[1.05]">Bereit für ein System, das skaliert?</h2>
                     <p class="text-lg md:text-2xl text-slate-400 mb-12 md:mb-20 font-light leading-relaxed">Wenn du deine Agentur unabhängiger von Personalkosten machen und die Delivery beschleunigen willst, lass uns sprechen.</p>
                     <div class="flex flex-col items-center gap-8">
                         <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-6 bg-white text-slate-900 px-12 py-6 rounded-full font-black text-xl md:text-3xl transition-all active:scale-95 shadow-xl hover:bg-slate-50 group">
