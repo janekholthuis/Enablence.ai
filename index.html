@@ -1573,931 +1573,850 @@ h1, h2, h3 { text-wrap: balance; }
 
     </style>
 </head>
-<body class="overflow-x-hidden selection:bg-blue-950 selection:text-white">
+<body>
+  <!-- Header / Navigation -->
+  <nav id="navbar" class="site-nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <img src="https://onecdn.io/media/1ab823e5-315d-4072-acef-8e6178d684c0/md2x" alt="Enablence" class="logo__mark" />
+        <span class="logo__text">ENABLENCE</span>
+      </a>
+      <div class="nav-links">
+        <a href="#problem" class="nav-link">Herausforderung</a>
+        <a href="#services" class="nav-link">Leistungen</a>
+        <a href="#cases" class="nav-link">Resultate</a>
+        <a href="#team" class="nav-link">Über uns</a>
+      </div>
+      <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="btn btn--primary btn--small nav-cta">
+        Kostenlose AI-Analyse sichern
+      </a>
+      <button id="menu-btn" class="nav-menu-btn" aria-label="Menü">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Header / Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 md:py-6">
-        <div class="container mx-auto px-5 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
-                <img src="https://onecdn.io/media/1ab823e5-315d-4072-acef-8e6178d684c0/md2x" alt="Enablence" class="h-8 md:h-9 w-auto brightness-0" />
-                <div class="flex flex-col">
-                
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="close-menu" class="mobile-menu__close" aria-label="Menü schließen">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="#problem" class="mobile-menu__link">Herausforderung</a>
+    <a href="#services" class="mobile-menu__link">Leistungen</a>
+    <a href="#cases" class="mobile-menu__link">Resultate</a>
+    <a href="#team" class="mobile-menu__link">Über uns</a>
+    <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" class="btn btn--primary mobile-menu__cta">Kostenlose AI-Analyse sichern</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section hero">
+    <div class="container hero__grid">
+      <div class="hero__content reveal active">
+        <h1 class="hero__title">
+          Wir automatisieren <br />
+          <span class="hero__title-accent">Performance Agenturen</span>
+        </h1>
+        <p class="hero__lead">
+          Wir ersetzen dein Tool Chaos durch zentralisierte KI- &amp; Automationssysteme für Vertrieb, Fulfillment, Backoffice und Reporting auf.
+        </p>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <i data-lucide="check-circle-2"></i>
+            <span>Bis zu 50% weniger operativer Aufwand</span>
+          </div>
+          <div class="hero__stat">
+            <i data-lucide="check-circle-2"></i>
+            <span>Höhere Umsatzrendite</span>
+          </div>
+          <div class="hero__stat">
+            <i data-lucide="check-circle-2"></i>
+            <span>Premium Delivery Qualität</span>
+          </div>
+          <div class="hero__stat">
+            <i data-lucide="check-circle-2"></i>
+            <span>Volle Transparenz über relevante KPIs</span>
+          </div>
+        </div>
+        <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="btn btn--primary btn--large hero__cta">
+          Kostenlose AI-Analyse sichern
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+      <div class="hero__visual reveal delay-300">
+        <div class="hero__image-wrap">
+          <img src="https://onecdn.io/media/1f0c3232-c07e-4db1-9ad5-d7f619c4fc71/full" alt="Leon Schmid" class="hero__image" loading="eager">
+          <div class="hero__image-fade"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tool Slider -->
+    <div class="tool-strip">
+      <div class="tool-strip__track">
+        <div class="tool-strip__row">
+          <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" alt="Make.com">
+          <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" alt="Airtable">
+          <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" alt="OpenAI">
+          <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" alt="Close">
+          <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" alt="Langdock">
+          <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" alt="n8n">
+          <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" alt="Claude">
+        </div>
+        <div class="tool-strip__row" aria-hidden="true">
+          <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" alt="Make.com">
+          <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" alt="Airtable">
+          <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" alt="OpenAI">
+          <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" alt="Close">
+          <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" alt="Langdock">
+          <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" alt="n8n">
+          <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" alt="Claude">
+        </div>
+      </div>
+      <div class="tool-strip__fade tool-strip__fade--left"></div>
+      <div class="tool-strip__fade tool-strip__fade--right"></div>
+    </div>
+  </section>
+  <!-- Problem Section -->
+  <section id="problem" class="section section--muted">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Die Situation</p>
+        <h2 class="section-title">
+          Alle reden über KI, aber niemand hat <br />
+          <span class="section-title__break">die Grundlage, diese wirklich zu nutzen.</span>
+        </h2>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card reveal">
+          <div class="problem-card__icon"><i data-lucide="layers"></i></div>
+          <h3>Tool-Chaos</h3>
+          <p>Verstreute Daten in zig Tools, keine Single Source of Truth</p>
+        </article>
+        <article class="problem-card reveal">
+          <div class="problem-card__icon"><i data-lucide="trending-up"></i></div>
+          <h3>Hohe Mitarbeiterkosten</h3>
+          <p>Skalierung nur mit Neueinstellungen</p>
+        </article>
+        <article class="problem-card reveal">
+          <div class="problem-card__icon"><i data-lucide="zap-off"></i></div>
+          <h3>Mühsames Fulfillment</h3>
+          <p>Mitarbeiter sind mit dem hohen Projektvolumen überfordert</p>
+        </article>
+        <article class="problem-card reveal">
+          <div class="problem-card__icon"><i data-lucide="user-minus"></i></div>
+          <h3>Verantwortung</h3>
+          <p>Die Verantwortung für deine Mitarbeiter raubt dir den letzten Nerv</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do: Orbit Graphic -->
+  <section id="what-we-do" class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split__content reveal">
+          <p class="eyebrow">Was wir machen</p>
+          <h2 class="split__title">
+            Wir erschaffen dir deine <span>AI-Infrastruktur</span>, die jede Zahl deiner Agentur kennt und dir einen unfairen Wettbewerbsvorteil verschafft.
+          </h2>
+          <p class="split__lead">
+            Standardaufgaben werden automatisiert & Menschen bleiben nur für Strategie und Qualitätskontrolle (Human-in-the-loop). So wird dein operatives Geschäft skalierbar, messbar und wiederholbar.
+          </p>
+          <div class="split__outcome">
+            <span>Outcome:</span>
+            <p>Mehr Output mit weniger Köpfen. 24/7. Fehlerarm. Skalierbar.</p>
+          </div>
+        </div>
+
+        <div class="split__visual reveal delay-2">
+          <div class="orbit">
+            <div class="orbit__grid"></div>
+            <div class="orbit__ring orbit__ring--outer"></div>
+            <div class="orbit__ring orbit__ring--inner"></div>
+            <svg class="orbit__lines" aria-hidden="true">
+              <line x1="50%" y1="50%" x2="85%" y2="50%" />
+              <line x1="50%" y1="50%" x2="71.8%" y2="77.3%" />
+              <line x1="50%" y1="50%" x2="42.2%" y2="84.1%" />
+              <line x1="50%" y1="50%" x2="18.5%" y2="65.2%" />
+              <line x1="50%" y1="50%" x2="18.5%" y2="34.8%" />
+              <line x1="50%" y1="50%" x2="42.2%" y2="15.9%" />
+              <line x1="50%" y1="50%" x2="71.8%" y2="22.7%" />
+            </svg>
+
+            <div class="orbit__core">
+              <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" alt="Airtable" />
+              <span>Core</span>
+            </div>
+
+            <div class="orbit__node" style="top: 50%; left: 85%;">
+              <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" alt="Make">
+            </div>
+            <div class="orbit__node" style="top: 77.3%; left: 71.8%;">
+              <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" alt="Claude">
+            </div>
+            <div class="orbit__node" style="top: 84.1%; left: 42.2%;">
+              <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" alt="n8n">
+            </div>
+            <div class="orbit__node" style="top: 65.2%; left: 18.5%;">
+              <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" alt="Langdock">
+            </div>
+            <div class="orbit__node" style="top: 34.8%; left: 18.5%;">
+              <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" alt="Close">
+            </div>
+            <div class="orbit__node" style="top: 22.7%; left: 71.8%;">
+              <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" alt="OpenAI">
+            </div>
+            <div class="orbit__node" style="top: 15.9%; left: 42.2%;">
+              <img src="https://cdn.brandfetch.io/id6Zq084G_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1725260983764" alt="Tool">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Leistungen / Module Section -->
+  <section id="services" class="section section--muted">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Module</p>
+        <h2 class="section-title">Die wichtigsten Bereiche, bei denen wir helfen können.</h2>
+      </div>
+
+      <div class="modules">
+        <article class="module reveal">
+          <div class="module__content">
+            <div class="module__header">
+              <div class="module__index">01</div>
+              <div class="module__tag">Vertrieb</div>
+            </div>
+            <h3>CRM Setup</h3>
+            <ul class="feature-list">
+              <li><i data-lucide="check"></i> Deine Leads werden maximal verwertet</li>
+              <li><i data-lucide="check"></i> Fokus immer auf den relevantesten Lead</li>
+              <li><i data-lucide="check"></i> Routineaufgaben wie Call-Doku automatisiert</li>
+              <li><i data-lucide="check"></i> Deine Vertriebler tun nichts, außer verkaufen</li>
+            </ul>
+            <div class="module__outcome">
+              <span>Outcome:</span>
+              <strong>höhere Close-Rate, mehr Anwahlen &amp; Termine</strong>
+            </div>
+          </div>
+          <div class="module__visual vis-container">
+            <div class="txFlow">
+              <div class="flow">
+                <div class="leftCol">
+                  <div class="node">
+                    <div class="icon">
+                      <img src="https://cdn.brandfetch.io/id6nzBRubZ/w/64/h/64/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1717513360815" alt="Airtable" />
+                    </div>
+                    <div class="text">
+                      <div class="label">Neuer Lead</div>
+                      <div class="value">Perspective</div>
+                    </div>
+                  </div>
                 </div>
+                <div class="wires" aria-hidden="true">
+                  <div class="wire main"></div>
+                  <div class="wire branchVTop"></div>
+                  <div class="wire branchHTop"></div>
+                  <div class="wire branchVBot"></div>
+                  <div class="wire branchHBot"></div>
+                  <div class="particle p-main"></div>
+                  <div class="particle p-top"></div>
+                  <div class="particle p-bot"></div>
+                </div>
+                <div class="rightCol">
+                  <div class="rightStack">
+                    <div class="node">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/id2K-M_V2y/w/1152/h/1152/theme/dark/symbol.png?c=1bxid64Mup7aczewSAYMX&t=1720167201927" alt="WhatsApp" />
+                      </div>
+                      <div class="text">
+                        <div class="label">CRM</div>
+                        <div class="value">Close.com</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon" style="border-radius:999px;">
+                        <img src="https://cdn.brandfetch.io/id6Zq084G_/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1725260972427" alt="Lexoffice" style="border-radius:999px;" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Notification</div>
+                        <div class="value">WhatsApp</div>
+                      </div>
+                    </div>
+                    <div class="node pulse">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1675163448780" alt="Airtable" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Database</div>
+                        <div class="value">CEO Dashboard</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module module--reverse reveal">
+          <div class="module__content">
+            <div class="module__header">
+              <div class="module__index">02</div>
+              <div class="module__tag">Ops</div>
+            </div>
+            <h3>Fulfillment-Automation mit KI</h3>
+            <ul class="feature-list">
+              <li><i data-lucide="check"></i> Daten laufen strukturiert in eine DB</li>
+              <li><i data-lucide="check"></i> Komplette Projekte in einer Oberfläche</li>
+              <li><i data-lucide="check"></i> Kunde gibt automatisiert Feedback per Portal</li>
+              <li><i data-lucide="check"></i> Assets werden automatisiert hochgeladen</li>
+            </ul>
+            <div class="module__outcome">
+              <span>Outcome:</span>
+              <strong>schnellere Projekte, höhere Kundenzufriedenheit, mehr Upsells</strong>
+            </div>
+          </div>
+          <div class="module__visual vis-container">
+            <div class="txFlow">
+              <div class="flow">
+                <div class="leftCol">
+                  <div class="node">
+                    <div class="icon">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/960px-Google_Meet_icon_%282020%29.svg.png" alt="Google Meet" />
+                    </div>
+                    <div class="text">
+                      <div class="label">Neuer Kunde</div>
+                      <div class="value">Kick-Off ?</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wires" aria-hidden="true">
+                  <div class="wire main"></div>
+                  <div class="wire branchVTop"></div>
+                  <div class="wire branchHTop"></div>
+                  <div class="wire branchVBot"></div>
+                  <div class="wire branchHBot"></div>
+                  <div class="particle p-main"></div>
+                  <div class="particle p-top"></div>
+                  <div class="particle p-bot"></div>
+                </div>
+                <div class="rightCol">
+                  <div class="rightStack">
+                    <div class="node pulse">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/idW5s392j1/w/338/h/338/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1738315794862" alt="Airtable" />
+                      </div>
+                      <div class="text">
+                        <div class="label">AI</div>
+                        <div class="value">Werbeinhalte</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon">
+                        <img src="https://static.thenounproject.com/png/2837107-200.png" alt="Portal" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Kundenportal</div>
+                        <div class="value">Feedback Abfrage</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon" style="border-radius:999px;">
+                        <img src="https://cdn.brandfetch.io/idWvz5T3V7/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1691142640809" alt="Meta" style="border-radius:999px;" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Kampagne</div>
+                        <div class="value">Aut. Meta Upload</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="module reveal">
+          <div class="module__content">
+            <div class="module__header">
+              <div class="module__index">03</div>
+              <div class="module__tag">Leads</div>
+            </div>
+            <h3>Scraping &amp; Cold-Mailing Infrastruktur</h3>
+            <ul class="feature-list">
+              <li><i data-lucide="check"></i> Automatisierte Recherche von Leads</li>
+              <li><i data-lucide="check"></i> Anreichern von allen notwendigen Daten</li>
+              <li><i data-lucide="check"></i> Skalierbare Mailing Infrastruktur</li>
+              <li><i data-lucide="check"></i> Nahtlose Integration in das CRM</li>
+            </ul>
+            <div class="module__outcome">
+              <span>Outcome:</span>
+              <strong>planbare Lead-Pipeline</strong>
+            </div>
+          </div>
+          <div class="module__visual vis-container">
+            <div class="txFlow">
+              <div class="flow">
+                <div class="leftCol">
+                  <div class="node">
+                    <div class="icon">
+                      <img src="https://cdn.brandfetch.io/idIuHSxm49/w/240/h/240/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1700421804530" alt="Scraping" />
+                    </div>
+                    <div class="text">
+                      <div class="label">Web Scraping</div>
+                      <div class="value">Kontaktrecherche</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wires" aria-hidden="true">
+                  <div class="wire main"></div>
+                  <div class="wire branchVTop"></div>
+                  <div class="wire branchHTop"></div>
+                  <div class="wire branchVBot"></div>
+                  <div class="wire branchHBot"></div>
+                  <div class="particle p-main"></div>
+                  <div class="particle p-top"></div>
+                  <div class="particle p-bot"></div>
+                </div>
+                <div class="rightCol">
+                  <div class="rightStack">
+                    <div class="node pulse">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/light/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1749527480180" alt="OpenAI" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Database</div>
+                        <div class="value">AI Enrichment</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/idlwotiiZv/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1762052262320" alt="Mailing" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Skalierbares Setup</div>
+                        <div class="value">Cold Mailing</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon" aria-hidden="true">
+                        <div class="moneyEmoji">??</div>
+                      </div>
+                      <div class="text">
+                        <div class="label">Neue Leads</div>
+                        <div class="value">Abschlüsse</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module module--reverse reveal">
+          <div class="module__content">
+            <div class="module__header">
+              <div class="module__index">04</div>
+              <div class="module__tag">CEO</div>
+            </div>
+            <h3>CEO KPI-Dashboards</h3>
+            <ul class="feature-list">
+              <li><i data-lucide="check"></i> Owner-Cockpit mit allen relevanten Kennzahlen</li>
+              <li><i data-lucide="check"></i> Datenbasierte Entscheidungen statt Bauchgefühl</li>
+              <li><i data-lucide="check"></i> Forecasting und Frühwarnsysteme (Alerts)</li>
+            </ul>
+            <div class="module__outcome">
+              <span>Outcome:</span>
+              <strong>volle Transparenz &amp; schnellere Steuerung</strong>
+            </div>
+          </div>
+          <div class="module__visual vis-container">
+            <div class="txFlow txFlow--rev">
+              <div class="flow">
+                <div class="leftCol">
+                  <div class="leftStack">
+                    <div class="node pulse">
+                      <div class="icon" aria-hidden="true"><div class="moneyEmoji">??</div></div>
+                      <div class="text">
+                        <div class="label">CRM</div>
+                        <div class="value">Sales-Daten</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/idxPi2Evsk/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1668515642970" alt="Projektmanagement" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Projektmanagement</div>
+                        <div class="value">Fulfillment-KPIs</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon" style="border-radius:999px;">
+                        <img src="https://cdn.brandfetch.io/idz4Sdtuy7/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1758355288092" alt="Lexoffice" style="border-radius:999px;" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Buchhaltung</div>
+                        <div class="value">Back-Office Zahlen</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wires" aria-hidden="true">
+                  <div class="wire main"></div>
+                  <div class="wire branchVTop"></div>
+                  <div class="wire branchHTop"></div>
+                  <div class="wire branchVBot"></div>
+                  <div class="wire branchHBot"></div>
+                  <div class="particle p-main"></div>
+                  <div class="particle p-top"></div>
+                  <div class="particle p-bot"></div>
+                </div>
+                <div class="rightCol">
+                  <div class="node">
+                    <div class="icon" aria-hidden="true"><div class="moneyEmoji">??</div></div>
+                    <div class="text">
+                      <div class="label">24/7 per Handy</div>
+                      <div class="value">CEO Dashboard</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module reveal">
+          <div class="module__content">
+            <div class="module__header">
+              <div class="module__index">05</div>
+              <div class="module__tag">Finanzen</div>
+            </div>
+            <h3>Backoffice-Automation</h3>
+            <ul class="feature-list">
+              <li><i data-lucide="check"></i> Rechnungsstellung &amp; Mahnwesen automatisiert</li>
+              <li><i data-lucide="check"></i> Zahlungsabgleich &amp; Übersichten für das Backoffice</li>
+              <li><i data-lucide="check"></i> Automatisierte Provisionsabrechnungen</li>
+            </ul>
+            <div class="module__outcome">
+              <span>Outcome:</span>
+              <strong>weniger Aufwand, saubere Forecasts</strong>
+            </div>
+          </div>
+          <div class="module__visual vis-container">
+            <div class="txFlow">
+              <div class="flow">
+                <div class="leftCol">
+                  <div class="node">
+                    <div class="icon" aria-hidden="true"><div class="moneyEmoji">??</div></div>
+                    <div class="text">
+                      <div class="label">Rechnung bezahlt</div>
+                      <div class="value">Geldeingang</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wires" aria-hidden="true">
+                  <div class="wire main"></div>
+                  <div class="wire branchVTop"></div>
+                  <div class="wire branchHTop"></div>
+                  <div class="wire branchVBot"></div>
+                  <div class="wire branchHBot"></div>
+                  <div class="particle p-main"></div>
+                  <div class="particle p-top"></div>
+                  <div class="particle p-bot"></div>
+                </div>
+                <div class="rightCol">
+                  <div class="rightStack">
+                    <div class="node pulse">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1675163448780" alt="Airtable" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Database</div>
+                        <div class="value">Airtable</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon">
+                        <img src="https://cdn.brandfetch.io/id6Zq084G_/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1725260972427" alt="WhatsApp" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Notification</div>
+                        <div class="value">WhatsApp</div>
+                      </div>
+                    </div>
+                    <div class="node">
+                      <div class="icon" style="border-radius:999px;">
+                        <img src="https://cdn.brandfetch.io/iddJ8DlE05/w/2048/h/2048/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1765362977466" alt="Lexoffice" style="border-radius:999px;" />
+                      </div>
+                      <div class="text">
+                        <div class="label">Buchhaltung</div>
+                        <div class="value">Lexoffice</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Nutzen / Ergebnisse Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Ergebnisse</p>
+        <h2 class="section-title">Lass KI für dich arbeiten.</h2>
+        <p class="section-lead">Routinetätigkeiten laufen automatisch, Personalkosten sinken drastisch und deine Rendite steigt.</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-card reveal">
+          <i data-lucide="trending-up"></i>
+          <span>Höhere Marge durch weniger Personalkosten</span>
+        </div>
+        <div class="result-card reveal">
+          <i data-lucide="zap"></i>
+          <span>Schnellere Delivery bei stabiler Qualität</span>
+        </div>
+        <div class="result-card reveal">
+          <i data-lucide="calendar-days"></i>
+          <span>Planbare Prozesse, weniger Feuerlöschen</span>
+        </div>
+        <div class="result-card reveal">
+          <i data-lucide="bar-chart-big"></i>
+          <span>Transparenz über Sales, Fulfillment &amp; Finanzen</span>
+        </div>
+        <div class="result-card reveal">
+          <i data-lucide="users-2"></i>
+          <span>Wachstum ohne linearen Teamaufbau</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section section--muted">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Das Team</p>
+        <h2 class="section-title">Über uns.</h2>
+      </div>
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <div class="team-card__image">
+            <img src="https://onecdn.io/media/75ba0de9-9867-414e-a6ba-73dc01b04751/sm2x" alt="Janek Holthuis">
+            <div class="team-card__overlay">
+              <h3>Janek Holthuis</h3>
+              <p>Founder &amp; Produktentwicklung</p>
+            </div>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-card__image">
+            <img src="https://onecdn.io/media/c6adf223-bb29-4581-8604-afc25e94a1f6/sm2x" alt="Leon Schmid">
+            <div class="team-card__overlay">
+              <h3>Leon Schmid</h3>
+              <p>Founder &amp; Geschäftsführer</p>
+            </div>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-card__image">
+            <img src="https://onecdn.io/media/2e4e97b0-0e4a-4958-85e7-00749b33d351/sm2x" alt="Andreas Baulig">
+            <div class="team-card__overlay">
+              <h3>Investor</h3>
+              <p>Investor &amp; Strategie</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Case Studies Section -->
+  <section id="cases" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Resultate</p>
+        <h2 class="section-title">Case Studies.</h2>
+      </div>
+
+      <div class="case-list">
+        <article class="case-card reveal">
+          <div class="case-card__content">
+            <img src="https://onecdn.io/media/839c1e1d-af8e-454b-84c8-49f45e3de1ec/md" alt="Quadratmeter Marketing">
+            <h3>Prozess Strukturierung der Agentur "Quadratmeter Marketing"</h3>
+            <div class="case-card__grid">
+              <div>
+                <h4>Herausforderung</h4>
+                <p>Kaum standardisierte Prozesse & viele Aufgaben manuell. Aufwand pro Task hoch, wertvolle Zeit für das Kerngeschäft ging verloren, Entscheidungen ohne belastbare Daten, kein funktionierendes Tracking, fehlende Systeme im Vertrieb. Kundenonboarding sehr aufwendig.</p>
+              </div>
+              <div>
+                <h4>Lösung</h4>
+                <p>Zentrales CRM-System mit Lead-Scoring, automatischer Auswertung von Calls, vollständig digitalisiertes Vertrags-, Rechnungs- und Backoffice-Management. Zusätzlich automatisiertes Onboarding von Kunden und Mitarbeitern. Entwicklung von Echtzeit-Dashboards, für Abbildung smtlicher Unternehmens-KPIs.</p>
+              </div>
+            </div>
+            <div class="case-card__quote">
+              <img src="https://onecdn.io/media/51c85131-0d9c-4c63-9047-9b1897fc96ad/sm" alt="Maximilian Quos">
+              <div>
+                <p>"Die Jungs sind einfach Maschinen wenn es darum geht Systeme zu bauen die uns enorm nach vorne bringen."</p>
+                <strong>Maximilian Quos</strong>
+                <span>Geschäftsführer</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-card__highlight">
+            <div>
+              <strong>+ 100.000 €</strong>
+              <p>Mehrumsatz jeden Monat generiert während mehrmonatiger Begleitung und Betreuung.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-card__content">
+            <img src="https://onecdn.io/media/1709af8a-fec4-4ba3-8f33-8fb61460318c/md" alt="Erfolg mit Immobilien">
+            <h3>Struktur für Projektentwickler "Erfolg mit Immobilien"</h3>
+            <div class="case-card__grid">
+              <div>
+                <h4>Herausforderung</h4>
+                <p>Kein funktionierendes Vertriebssystem, zu wenig Vertriebspartner. Viele manuelle Abläufe, kein strukturiertes Onboarding, keine Auswertungen. Hoher Aufwand in Beratung und Finanzierungsvorbereitung.</p>
+              </div>
+              <div>
+                <h4>Lösung</h4>
+                <p>Aufbau eines leistungsstarken CRMs mit klarer Struktur. Automatisierte Gewinnung neuer Vertriebspartner durch Lead-Scraping &amp; Cold-Mailing-Kampagnen. Vollautomatisches Onboarding mit Vertragsversand, Follow-ups und Aufgabenmanagement. Zudem neuer Flow für Kundenselbstauskunft und Datenaufbereitung für Finanzierungen.</p>
+              </div>
+            </div>
+            <div class="case-card__quote">
+              <img src="https://onecdn.io/media/c6a231ef-c791-4900-b9d9-4176411951ba/sm" alt="Chris Matthewes">
+              <div>
+                <p>"Mir war vorher nicht bewusst, was sich alles automatisieren lässt. Wir haben enorm an Effizienz und Geschwindigkeit in unserem Tagesgeschäft gewonnen"</p>
+                <strong>Chris Matthewes</strong>
+                <span>Geschäftsführer</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-card__highlight">
+            <div>
+              <strong>+ 50</strong>
+              <p>neue Vertriebspartner</p>
+              <small>Innerhalb von wenigen Monaten</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-card__content">
+            <img src="https://onecdn.io/media/be720de7-eb26-45a9-9500-5598aa970ed7/md" alt="Online Steuerrechner">
+            <h3>Online Steuerrechner für Lead Generierung und Qualifizierung</h3>
+            <div class="case-card__grid">
+              <div>
+                <h4>Herausforderung</h4>
+                <p>Zu viele unqualifizierte Leads.</p>
+              </div>
+              <div>
+                <h4>Lösung</h4>
+                <p>Entwicklung eines digitalen GmbH-Steuerrechners, der auf Basis der Nutzereingaben die individuellen steuerlichen Vorteile einer GmbH-Gründung berechnet. Dadurch entsteht ein wirkungsvolles Instrument zur Lead-Generierung und gleichzeitig zur Qualifizierung: Nur passende und ernsthafte Interessenten gelangen in das Erstgespräch.</p>
+              </div>
+            </div>
+            <div class="case-card__quote">
+              <img src="https://onecdn.io/media/408e3de6-aadb-4dda-ac15-cac20c38d29e/sm" alt="Lukas Janik">
+              <div>
+                <p>"Einfach nur starke Arbeit. Wir bekommen viel Lob von Steuerexperten aus der Branche und die Qualtitt unserer Erstgesprche hat sich drastisch verbessert."</p>
+                <strong>Lukas Janik</strong>
+                <span>Gründer</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-card__highlight">
+            <div>
+              <strong>- 43 %</strong>
+              <p>unqualifizierte Erstgespräche</p>
+              <small>nach Einsatz des Rechners.</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Final CTA Section -->
+  <section class="section section--muted">
+    <div class="container">
+      <div class="cta reveal">
+        <div class="cta__glow"></div>
+        <div class="cta__content">
+          <h2>Bereit für ein System, das skaliert?</h2>
+          <p>Wenn du deine Agentur unabhngiger von Personalkosten machen und die Delivery beschleunigen willst, lass uns sprechen.</p>
+          <div class="cta__actions">
+            <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="btn btn--light btn--xl">
+              Kostenlose AI-Analyse sichern
+              <i data-lucide="arrow-right"></i>
             </a>
-            <div class="hidden lg:flex items-center gap-10">
-                <a href="#problem" class="text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition-colors">Herausforderung</a>
-                <a href="#services" class="text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition-colors">Leistungen</a>
-                <a href="#cases" class="text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition-colors">Resultate</a>
-                <a href="#team" class="text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition-colors">Über uns</a>
+            <div class="cta__note">
+              <i data-lucide="clock"></i>
+              30 Minuten. Wir zeigen dir, was bei dir mit AI möglich ist.
             </div>
-            <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="hidden md:inline-flex bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-full text-xs font-bold tracking-wide transition-all active:scale-95 shadow-lg">
-                Kostenlose AI-Analyse sichern
-            </a>
-            <button id="menu-btn" class="lg:hidden p-2 text-slate-900" aria-label="Menü">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col p-8 pt-24 gap-8">
-        <button id="close-menu" class="absolute top-6 right-6 p-2 text-slate-900"><i data-lucide="x" class="w-8 h-8"></i></button>
-        <a href="#problem" class="mobile-nav-link text-3xl font-black text-slate-900 border-b border-slate-100 pb-4">Herausforderung</a>
-        <a href="#services" class="mobile-nav-link text-3xl font-black text-slate-900 border-b border-slate-100 pb-4">Leistungen</a>
-        <a href="#cases" class="mobile-nav-link text-3xl font-black text-slate-900 border-b border-slate-100 pb-4">Resultate</a>
-        <a href="#team" class="mobile-nav-link text-3xl font-black text-slate-900 border-b border-slate-100 pb-4">Über uns</a>
-        <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" class="mt-auto w-full bg-slate-900 text-white text-center py-5 rounded-2xl font-bold text-lg">Kostenlose AI-Analyse sichern</a>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col justify-center bg-white pt-28 md:pt-32 overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-4">
-                <div class="w-full lg:w-[55%] text-left reveal active">
-                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-8 tracking-tighter text-slate-900">
-                        Wir automatisieren <br />
-                        <span class="text-blue-700">Performance Agenturen</span>
-                    </h1>
-                    <p class="text-lg md:text-2xl text-slate-500 max-w-xl mb-12 leading-relaxed font-light">
-                        Wir ersetzen dein Tool Chaos durch zentralisierte KI- & Automationssysteme für Vertrieb, Fulfillment, Backoffice und Reporting auf.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-                        <div class="flex items-center gap-3 text-slate-700 font-semibold text-sm md:text-base">
-                            <i data-lucide="check-circle-2" class="text-blue-600 w-5 h-5 shrink-0"></i>
-                            <span>Bis zu 50% weniger operativer Aufwand</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-700 font-semibold text-sm md:text-base">
-                            <i data-lucide="check-circle-2" class="text-blue-600 w-5 h-5 shrink-0"></i>
-                            <span>Höhere Umsatzrendite</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-700 font-semibold text-sm md:text-base">
-                            <i data-lucide="check-circle-2" class="text-blue-600 w-5 h-5 shrink-0"></i>
-                            <span>Premium Delivery Qualität</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-700 font-semibold text-sm md:text-base">
-                            <i data-lucide="check-circle-2" class="text-blue-600 w-5 h-5 shrink-0"></i>
-                            <span>Volle Transparenz über relevante KPIs</span>
-                        </div>
-                    </div>
-                    <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="inline-flex items-center justify-center gap-4 bg-slate-900 hover:bg-slate-800 text-white px-10 py-5 rounded-full font-black text-lg transition-all active:scale-95 shadow-2xl group">
-                        Kostenlose AI-Analyse sichern
-                        <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-                <div class="w-full lg:w-[45%] relative flex justify-center lg:justify-end reveal delay-300">
-                    <div class="relative w-full max-w-[450px] lg:max-w-none h-[300px] sm:h-[450px] lg:h-[750px] flex items-end justify-center lg:justify-end">
-                        <div class="relative flex items-end -space-x-16 sm:-space-x-32 group grayscale hover:grayscale-0 transition-all duration-1000">
-                            <img src="https://onecdn.io/media/1f0c3232-c07e-4db1-9ad5-d7f619c4fc71/full" alt="Leon Schmid" class="h-full w-auto object-contain transform transition-transform duration-700 group-hover:-translate-y-2" loading="eager">
-                        </div>
-                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Tool Slider -->
-        <div class="bg-white border-y border-slate-100 py-6 md:py-10 overflow-hidden relative">
-        <div class="flex w-[200%]">
-                <div class="flex w-full justify-around items-center opacity-40 grayscale">
-                    <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" class="h-6 md:h-8 px-8" alt="Make.com">
-                    <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" class="h-6 md:h-8 px-8" alt="Airtable">
-                    <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" class="h-6 md:h-8 px-8" alt="OpenAI">
-                    <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" class="h-6 md:h-8 px-8" alt="Close">
-                    <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" class="h-6 md:h-8 px-8" alt="Langdock">
-                    <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" class="h-6 md:h-8 px-8" alt="n8n">
-                    <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" class="h-6 md:h-8 px-8" alt="Claude">
-                </div>
-                <div class="flex w-full justify-around items-center opacity-40 grayscale">
-                    <img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" class="h-6 md:h-8 px-8" alt="Make.com">
-                    <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" class="h-6 md:h-8 px-8" alt="Airtable">
-                    <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" class="h-6 md:h-8 px-8" alt="OpenAI">
-                    <img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" class="h-6 md:h-8 px-8" alt="Close">
-                    <img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" class="h-6 md:h-8 px-8" alt="Langdock">
-                    <img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" class="h-6 md:h-8 px-8" alt="n8n">
-                    <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" class="h-6 md:h-8 px-8" alt="Claude">
-                </div>
-            </div>
-            <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
-            <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section id="problem" class="py-24 md:py-32 bg-slate-50 overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
-                <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Die Situation</h2>
-                <h3 class="text-3xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight">
-                    Alle reden über KI, aber niemand hat <br class="hidden md:block" /> die Grundlage, diese wirklich zu nutzen.
-                </h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-10 rounded-[2.5rem] reveal shadow-sm border border-slate-100 group">
-                    <div class="bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 mb-8"><i data-lucide="layers"></i></div>
-                    <h4 class="text-2xl font-black mb-4 text-slate-900">Tool-Chaos</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Verstreute Daten in zig Tools, keine Single Source of Truth</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] reveal shadow-sm border border-slate-100 group delay-100">
-                    <div class="bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 mb-8"><i data-lucide="trending-up"></i></div>
-                    <h4 class="text-2xl font-black mb-4 text-slate-900">Hohe Mitarbeiterkosten</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Skalierung nur mit Neueinstellungen</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] reveal shadow-sm border border-slate-100 group delay-200">
-                    <div class="bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 mb-8"><i data-lucide="zap-off"></i></div>
-                    <h4 class="text-2xl font-black mb-4 text-slate-900">Mühsames Fulfillment</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Mitarbeiter sind mit dem hohen Projektvolumen überfordert</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] reveal shadow-sm border border-slate-100 group delay-300">
-                    <div class="bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 mb-8"><i data-lucide="user-minus"></i></div>
-                    <h4 class="text-2xl font-black mb-4 text-slate-900">Verantwortung</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Die Verantwortung für deine Mitarbeiter raubt dir den letzten Nerv</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Do: Orbit Graphic -->
-    <section id="what-we-do" class="py-24 md:py-32 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16 md:gap-24">
-                <div class="w-full lg:w-1/2 reveal">
-                    <h2 class="text-blue-500 font-bold tracking-[0.4em] uppercase text-xs mb-6">Was wir machen</h2>
-                    <h3 class="text-3xl md:text-6xl lg:text-xl font-black mb-10 text-blue-950 tracking-tighter leading-tight">
-                        Wir erschaffen dir deine <span class="text-blue-700">AI-Infrastruktur</span>, die jede Zahl deiner Agentur kennt und dir einen unfairen Wettbewerbsvorteil verschafft.
-                    </h3>
-                    <p class="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed font-light">
-                        Standardaufgaben werden automatisiert – Menschen bleiben nur für Strategie und Qualitätskontrolle (Human-in-the-loop). So wird dein operatives Geschäft skalierbar, messbar und wiederholbar.
-                    </p>
-                    <div class="p-8 bg-blue-950 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl shadow-blue-200">
-                        <div class="text-blue-300 font-bold text-xs uppercase tracking-[0.4em] mb-4">Outcome:</div>
-                        <p class="text-xl md:text-2xl text-white font-black">Mehr Output mit weniger Köpfen. 24/7. Fehlerarm. Skalierbar.</p>
-                    </div>
-                </div>
-                
-                <!-- Orbit Graphic -->
-                <div class="w-full lg:w-1/2 relative reveal delay-2">
-                    <div class="relative w-full aspect-square bg-slate-50 rounded-[2.5rem] md:rounded-[3.5rem] border border-slate-100 shadow-2xl shadow-slate-200 overflow-hidden flex items-center justify-center">
-                        <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
-                        
-                        <div class="absolute w-[85%] h-[85%] border border-slate-200 rounded-full opacity-60"></div>
-                        <div class="absolute w-[55%] h-[55%] border border-slate-200 rounded-full opacity-60"></div>
-                        
-                        <svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
-                            <line x1="50%" y1="50%" x2="85%" y2="50%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                            <line x1="50%" y1="50%" x2="71.8%" y2="77.3%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                            <line x1="50%" y1="50%" x2="42.2%" y2="84.1%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                            <line x1="50%" y1="50%" x2="18.5%" y2="65.2%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                            <line x1="50%" y1="50%" x2="18.5%" y2="34.8%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                            <line x1="50%" y1="50%" x2="42.2%" y2="15.9%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                            <line x1="50%" y1="50%" x2="71.8%" y2="22.7%" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4" />
-                        </svg>
-                
-                        <div class="relative z-20 w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center justify-center p-6">
-                            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487" alt="Airtable" class="w-full h-full object-contain" />
-                            <div class="absolute -bottom-8 text-xs font-bold uppercase tracking-widest text-blue-400">Core</div>
-                        </div>
-                
-                        <!-- Orbiting Nodes -->
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 50%; left: 85%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 77.3%; left: 71.8%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 84.1%; left: 42.2%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 65.2%; left: 18.5%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idAEcbeWj3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761840561442" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 34.8%; left: 18.5%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 22.7%; left: 71.8%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/idR3duQxYl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1741166761458" class="w-full h-full object-contain"></div>
-                        <div class="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center p-3 z-10 hover:scale-110 transition-transform duration-300" style="top: 15.9%; left: 42.2%; transform: translate(-50%, -50%);"><img src="https://cdn.brandfetch.io/id6Zq084G_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1725260983764" class="w-full h-full object-contain"></div> </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leistungen / Module Section -->
-    <section id="services" class="py-24 md:py-32 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
-                <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Module</h2>
-                <h3 class="text-3xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight">Die wichtigsten Bereiche, bei denen wir helfen können.</h3>
-            </div>
-
-            <div class="flex flex-col gap-12 md:gap-24 max-w-7xl mx-auto">
-                <!-- Modul 1: CRM Setup -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
-                    <div class="order-2 lg:order-1 bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
-                        <div class="flex items-start justify-between mb-8">
-                            <div class="text-5xl font-black text-slate-100">01</div>
-                            <div class="px-5 py-1.5 rounded-full bg-blue-600 text-white text-[9px] font-bold uppercase tracking-widest">Vertrieb</div>
-                        </div>
-                        <h4 class="text-2xl md:text-3xl font-black mb-6 text-slate-900">CRM Setup</h4>
-                        <ul class="space-y-4 mb-10 text-slate-500 font-light">
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Deine Leads werden maximal verwertet</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Fokus immer auf den relevantesten Lead</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Routineaufgaben wie Call-Doku automatisiert</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Deine Vertriebler tun nichts, außer verkaufen</li>
-                        </ul>
-                        <div class="pt-8 border-t border-slate-100">
-                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-2">Outcome:</span>
-                            <span class="text-lg font-black text-slate-900">höhere Close-Rate, mehr Anwahlen & Termine</span>
-                        </div>
-                    </div>
-                    <div class="order-1 lg:order-2 vis-container aspect-video">
-<div class="txFlow">
-  <div class="flow">
-    <!-- LEFT -->
-    <div class="leftCol">
-      <div class="node">
-       
-<div class="icon">
-            <img src="https://cdn.brandfetch.io/id6nzBRubZ/w/64/h/64/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1717513360815" alt="Airtable" />
-          </div>        <div class="text">
-            <div class="label">Neuer Lead</div>
-          <div class="value">Perspective</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MIDDLE WIRES -->
-    <div class="wires" aria-hidden="true">
-      <div class="wire main"></div>
-      <div class="wire branchVTop"></div>
-      <div class="wire branchHTop"></div>
-      <div class="wire branchVBot"></div>
-      <div class="wire branchHBot"></div>
-
-      <div class="particle p-main"></div>
-      <div class="particle p-top"></div>
-      <div class="particle p-bot"></div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="rightCol">
-      <div class="rightStack">
-    
-
-        <div class="node">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/id2K-M_V2y/w/1152/h/1152/theme/dark/symbol.png?c=1bxid64Mup7aczewSAYMX&t=1720167201927" alt="WhatsApp" />
-          </div>
-          <div class="text">
-            <div class="label">CRM</div>
-            <div class="value">Close.com</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon" style="border-radius:999px;">
-            <img src="https://cdn.brandfetch.io/id6Zq084G_/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1725260972427" alt="Lexoffice" style="border-radius:999px;" />
-          </div>
-          <div class="text">
-            <div class="label">Notification</div>
-            <div class="value">WhatsApp</div>
-          </div>
-        </div>
-         <div class="node pulse">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1675163448780" alt="Airtable" />
-          </div>
-          <div class="text">
-            <div class="label">Database</div>
-            <div class="value">CEO Dashboard</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-                    </div>
-                </div>
+  </section>
 
-                <!-- Modul 2: Fulfillment -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
-                    <div class="vis-container aspect-video">
-                     
-
-<div class="txFlow">
-  <div class="flow">
-    <!-- LEFT -->
-    <div class="leftCol">
-      <div class="node">
-       
-<div class="icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/960px-Google_Meet_icon_%282020%29.svg.png" alt="Airtable" />
-          </div>        <div class="text">
-          <div class="label">Neuer Kunde</div>
-          <div class="value">Kick-Off ✅</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo footer__logo">
+            <img src="https://onecdn.io/media/1ab823e5-315d-4072-acef-8e6178d684c0/md2x" alt="Enablence">
+            <span>ENABLENCE</span>
+          </div>
+          <p>Wir transformieren Agenturen durch modernste KI-Automatisierung in skalierbare Marktführer.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <div class="footer__item"><i data-lucide="map-pin"></i> Paphos, Zypern</div>
+          <div class="footer__item"><i data-lucide="mail"></i> service@enablence.ai</div>
         </div>
       </div>
+      <div class="footer__bottom">&copy; 2025 Enablence Ltd. Alle Rechte vorbehalten.</div>
     </div>
+  </footer>
 
-    <!-- MIDDLE WIRES -->
-    <div class="wires" aria-hidden="true">
-      <div class="wire main"></div>
-      <div class="wire branchVTop"></div>
-      <div class="wire branchHTop"></div>
-      <div class="wire branchVBot"></div>
-      <div class="wire branchHBot"></div>
-
-      <div class="particle p-main"></div>
-      <div class="particle p-top"></div>
-      <div class="particle p-bot"></div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="rightCol">
-      <div class="rightStack">
-        <div class="node pulse">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/idW5s392j1/w/338/h/338/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1738315794862" alt="Airtable" />
-          </div>
-          <div class="text">
-            <div class="label">AI</div>
-            <div class="value">Werbeinhalte</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon">
-            <img src="https://static.thenounproject.com/png/2837107-200.png" alt="WhatsApp" />
-          </div>
-          <div class="text">
-            <div class="label">Kundenportal</div>
-            <div class="value">Feedback Abfrage</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon" style="border-radius:999px;">
-            <img src="https://cdn.brandfetch.io/idWvz5T3V7/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1691142640809" alt="Lexoffice" style="border-radius:999px;" />
-          </div>
-          <div class="text">
-            <div class="label">Kampagne</div>
-            <div class="value">Aut. Meta Upload</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-                    </div>
-                    <div class="bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
-                        <div class="flex items-start justify-between mb-8">
-                            <div class="text-5xl font-black text-slate-100">02</div>
-                            <div class="px-5 py-1.5 rounded-full bg-blue-600 text-white text-[9px] font-bold uppercase tracking-widest">Ops</div>
-                        </div>
-                        <h4 class="text-2xl md:text-3xl font-black mb-6 text-slate-900">Fulfillment-Automation mit KI</h4>
-                        <ul class="space-y-4 mb-10 text-slate-500 font-light">
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Daten laufen strukturiert in eine DB</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Komplette Projekte in einer Oberfläche</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Kunde gibt automatisiert Feedback per Portal</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Assets werden automatisiert hochgeladen</li>
-                        </ul>
-                        <div class="pt-8 border-t border-slate-100">
-                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-2">Outcome:</span>
-                            <span class="text-lg font-black text-slate-900">schnellere Projekte, höhere Kundenzufriedenheit, mehr Upsells</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modul 3: Scraping -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
-                    <div class="order-2 lg:order-1 bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
-                        <div class="flex items-start justify-between mb-8">
-                            <div class="text-5xl font-black text-slate-100">03</div>
-                            <div class="px-5 py-1.5 rounded-full bg-blue-600 text-white text-[9px] font-bold uppercase tracking-widest">Leads</div>
-                        </div>
-                        <h4 class="text-2xl md:text-3xl font-black mb-6 text-slate-900">Scraping & Cold-Mailing Infrastruktur</h4>
-                        <ul class="space-y-4 mb-10 text-slate-500 font-light">
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Automatisierte Recherche von Leads</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Anreichern von allen notwendigen Daten</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Skalierbare Mailing Infrastruktur</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Nahtlose Integration in das CRM</li>
-                        </ul>
-                        <div class="pt-8 border-t border-slate-100">
-                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-2">Outcome:</span>
-                            <span class="text-lg font-black text-slate-900">planbare Lead-Pipeline</span>
-                        </div>
-                    </div>
-                    <div class="order-1 lg:order-2 vis-container aspect-video">
-<div class="txFlow">
-  <div class="flow">
-    <!-- LEFT -->
-    <div class="leftCol">
-      <div class="node">
-       
-<div class="icon">
-            <img src="https://cdn.brandfetch.io/idIuHSxm49/w/240/h/240/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1700421804530" alt="Airtable" />
-          </div>        <div class="text">
-          <div class="label">Web Scraping</div>
-          <div class="value">Kontaktrecherche</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MIDDLE WIRES -->
-    <div class="wires" aria-hidden="true">
-      <div class="wire main"></div>
-      <div class="wire branchVTop"></div>
-      <div class="wire branchHTop"></div>
-      <div class="wire branchVBot"></div>
-      <div class="wire branchHBot"></div>
-
-      <div class="particle p-main"></div>
-      <div class="particle p-top"></div>
-      <div class="particle p-bot"></div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="rightCol">
-      <div class="rightStack">
-        <div class="node pulse">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/idR3duQxYl/theme/light/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1749527480180" alt="Airtable" />
-          </div>
-          <div class="text">
-            <div class="label">Database</div>
-            <div class="value">AI Enrichment</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/idlwotiiZv/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1762052262320" alt="WhatsApp" />
-          </div>
-          <div class="text">
-            <div class="label">Skalierbares Setup</div>
-            <div class="value">Cold Mailing</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon" style="border-radius:999px;">
-        <div class="icon" aria-hidden="true"><div class="moneyEmoji">💸</div></div>
-          </div>
-          <div class="text">
-            <div class="label">Neue Leads</div>
-            <div class="value">Abschlüsse</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-                    </div>
-                </div>
-
-                <!-- Modul 4: Dashboards -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
-                    <div class="vis-container aspect-video">
-<div class="txFlow txFlow--rev">
-  <div class="flow">
-    <!-- LEFT (3 sources) -->
-    <div class="leftCol">
-      <div class="leftStack">
-        <div class="node pulse">
-                 <div class="icon" aria-hidden="true"><div class="moneyEmoji">💸</div></div>
-
-          <div class="text">
-            <div class="label">CRM</div>
-            <div class="value">Sales-Daten</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/idxPi2Evsk/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1668515642970" alt="WhatsApp" />
-          </div>
-          <div class="text">
-            <div class="label">Projektmanagement</div>
-            <div class="value">Fulfillment-KPIs</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon" style="border-radius:999px;">
-            <img src="https://cdn.brandfetch.io/idz4Sdtuy7/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1758355288092" alt="Lexoffice" style="border-radius:999px;" />
-          </div>
-          <div class="text">
-            <div class="label">Buchhaltung</div>
-            <div class="value">Back-Office Zahlen</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MIDDLE WIRES -->
-    <div class="wires" aria-hidden="true">
-      <div class="wire main"></div>
-      <div class="wire branchVTop"></div>
-      <div class="wire branchHTop"></div>
-      <div class="wire branchVBot"></div>
-      <div class="wire branchHBot"></div>
-
-      <div class="particle p-main"></div>
-      <div class="particle p-top"></div>
-      <div class="particle p-bot"></div>
-    </div>
-
-    <!-- RIGHT (single sink) -->
-    <div class="rightCol">
-      <div class="node">
-                <div class="icon" aria-hidden="true"><div class="moneyEmoji">📊</div></div>
-
-        <div class="text">
-          <div class="label">24/7 per Handy</div>
-          <div class="value">CEO Dashboard</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-                    </div>
-                    <div class="bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
-                        <div class="flex items-start justify-between mb-8">
-                            <div class="text-5xl font-black text-slate-100">04</div>
-                            <div class="px-5 py-1.5 rounded-full bg-blue-600 text-white text-[9px] font-bold uppercase tracking-widest">CEO</div>
-                        </div>
-                        <h4 class="text-2xl md:text-3xl font-black mb-6 text-slate-900">CEO KPI-Dashboards</h4>
-                        <ul class="space-y-4 mb-10 text-slate-500 font-light">
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Owner-Cockpit mit allen relevanten Kennzahlen</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Datenbasierte Entscheidungen statt Bauchgefühl</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Forecasting und Frühwarnsysteme (Alerts)</li>
-                        </ul>
-                        <div class="pt-8 border-t border-slate-100">
-                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-2">Outcome:</span>
-                            <span class="text-lg font-black text-slate-900">volle Transparenz & schnellere Steuerung</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modul 5: Backoffice - NEW INSPIRED ANIMATION -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
-                    <div class="order-2 lg:order-1 bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] shadow-premium">
-                        <div class="flex items-start justify-between mb-8">
-                            <div class="text-5xl font-black text-slate-100">05</div>
-                            <div class="px-5 py-1.5 rounded-full bg-blue-600 text-white text-[9px] font-bold uppercase tracking-widest">Finanzen</div>
-                        </div>
-                        <h4 class="text-2xl md:text-3xl font-black mb-6 text-slate-900">Backoffice-Automation</h4>
-                        <ul class="space-y-4 mb-10 text-slate-500 font-light">
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Rechnungsstellung & Mahnwesen automatisiert</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Zahlungsabgleich & Übersichten für das Backoffice</li>
-                            <li class="flex items-start gap-4"><i data-lucide="check" class="text-blue-600 w-5 h-5 mt-0.5"></i> Automatisierte Provisionsabrechnungen</li>
-                        </ul>
-                        <div class="pt-8 border-t border-slate-100">
-                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-2">Outcome:</span>
-                            <span class="text-lg font-black text-slate-900">weniger Aufwand, saubere Forecasts</span>
-                        </div>
-                    </div>
-                    <div class="order-1 lg:order-2 vis-container aspect-video">
-                      <!-- ANIMATION HERE -->
-
-<div class="txFlow">
-  <div class="flow">
-    <!-- LEFT -->
-    <div class="leftCol">
-      <div class="node">
-       
-        <div class="icon" aria-hidden="true"><div class="moneyEmoji">💸</div></div>
-        <div class="text">
-          <div class="label">Rechnung bezahlt</div>
-          <div class="value">Geldeingang</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MIDDLE WIRES -->
-    <div class="wires" aria-hidden="true">
-      <div class="wire main"></div>
-      <div class="wire branchVTop"></div>
-      <div class="wire branchHTop"></div>
-      <div class="wire branchVBot"></div>
-      <div class="wire branchHBot"></div>
-
-      <div class="particle p-main"></div>
-      <div class="particle p-top"></div>
-      <div class="particle p-bot"></div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="rightCol">
-      <div class="rightStack">
-        <div class="node pulse">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1675163448780" alt="Airtable" />
-          </div>
-          <div class="text">
-            <div class="label">Database</div>
-            <div class="value">Airtable</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon">
-            <img src="https://cdn.brandfetch.io/id6Zq084G_/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1725260972427" alt="WhatsApp" />
-          </div>
-          <div class="text">
-            <div class="label">Notification</div>
-            <div class="value">WhatsApp</div>
-          </div>
-        </div>
-
-        <div class="node">
-          <div class="icon" style="border-radius:999px;">
-            <img src="https://cdn.brandfetch.io/iddJ8DlE05/w/2048/h/2048/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1765362977466" alt="Lexoffice" style="border-radius:999px;" />
-          </div>
-          <div class="text">
-            <div class="label">Buchhaltung</div>
-            <div class="value">Lexoffice</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nutzen / Ergebnisse Section -->
-    <section class="py-24 md:py-32 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
-                <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Ergebnisse</h2>
-                <h3 class="text-2xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight">Lass KI für dich arbeiten.</h3>
-                <p class="text-lg md:text-2xl text-slate-500 mt-8 font-light leading-relaxed max-w-2xl mx-auto">Routinetätigkeiten laufen automatisch, Personalkosten sinken drastisch und deine Rendite steigt.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="flex items-center gap-6 p-8 bg-slate-50 rounded-[2rem] border border-slate-100 reveal">
-                    <i data-lucide="trending-up" class="text-blue-600 w-8 h-8 shrink-0"></i>
-                    <span class="text-lg font-bold text-slate-800 leading-tight">Höhere Marge durch weniger Personalkosten</span>
-                </div>
-                <div class="flex items-center gap-6 p-8 bg-slate-50 rounded-[2rem] border border-slate-100 reveal">
-                    <i data-lucide="zap" class="text-blue-600 w-8 h-8 shrink-0"></i>
-                    <span class="text-lg font-bold text-slate-800 leading-tight">Schnellere Delivery bei stabiler Qualität</span>
-                </div>
-                <div class="flex items-center gap-6 p-8 bg-slate-50 rounded-[2rem] border border-slate-100 reveal">
-                    <i data-lucide="calendar-days" class="text-blue-600 w-8 h-8 shrink-0"></i>
-                    <span class="text-lg font-bold text-slate-800 leading-tight">Planbare Prozesse, weniger Feuerlöschen</span>
-                </div>
-                <div class="flex items-center gap-6 p-8 bg-slate-50 rounded-[2rem] border border-slate-100 reveal">
-                    <i data-lucide="bar-chart-big" class="text-blue-600 w-8 h-8 shrink-0"></i>
-                    <span class="text-lg font-bold text-slate-800 leading-tight">Transparenz über Sales, Fulfillment & Finanzen</span>
-                </div>
-                <div class="flex items-center gap-6 p-8 bg-slate-50 rounded-[2rem] border border-slate-100 reveal">
-                    <i data-lucide="users-2" class="text-blue-600 w-8 h-8 shrink-0"></i>
-                    <span class="text-lg font-bold text-slate-800 leading-tight">Wachstum ohne linearen Teamaufbau</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-24 md:py-32 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
-                <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Das Team</h2>
-                <h3 class="text-2xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight">Wer hinter den Systemen steckt</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                <div class="reveal">
-                    <div class="bg-white rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-premium relative group">
-                        <img src="https://onecdn.io/media/75ba0de9-9867-414e-a6ba-73dc01b04751/sm2x" alt="Janek Holthuis" class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent">
-                            <div class="text-white font-black text-xl md:text-2xl">Janek Holthuis</div>
-                            <div class="text-blue-300 text-xs font-bold uppercase tracking-widest">Founder & Produktentwicklung</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reveal delay-100">
-                    <div class="bg-white rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-premium relative group">
-                        <img src="https://onecdn.io/media/c6adf223-bb29-4581-8604-afc25e94a1f6/sm2x" alt="Leon Schmid" class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent">
-                            <div class="text-white font-black text-xl md:text-2xl">Leon Schmid</div>
-                            <div class="text-blue-300 text-xs font-bold uppercase tracking-widest">Founder & Geschäftsführer</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reveal delay-200">
-                    <div class="bg-white rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-premium relative group">
-                        <img src="https://onecdn.io/media/2e4e97b0-0e4a-4958-85e7-00749b33d351/sm2x" alt="Andreas Baulig" class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent">
-                            <div class="text-white font-black text-xl md:text-2xl">Investor</div>
-                            <div class="text-blue-300 text-xs font-bold uppercase tracking-widest">Investor & Strategie</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="cases" class="py-24 md:py-32 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
-                <h2 class="text-blue-600 font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6">Resultate</h2>
-                <h3 class="text-2xl md:text-6xl font-black text-slate-900 tracking-tighter">Case Studies.</h3>
-            </div>
-
-            <div class="flex flex-col gap-12 md:gap-16 max-w-7xl mx-auto">
-                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 reveal shadow-premium">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-                        <div class="lg:col-span-8 flex flex-col justify-between">
-                            <div>
-                                <img src="https://onecdn.io/media/839c1e1d-af8e-454b-84c8-49f45e3de1ec/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Quadratmeter Marketing">
-                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Prozess Strukturierung der Agentur "Quadratmeter Marketing"</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-                                    <div>
-                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Herausforderung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Kaum standardisierte Prozesse – viele Aufgaben manuell. Aufwand pro Task hoch, wertvolle Zeit für das Kerngeschäft ging verloren, Entscheidungen ohne belastbare Daten, kein funktionierendes Tracking, fehlende Systeme im Vertrieb. Kundenonboarding sehr aufwendig.</p>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Lösung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Zentrales CRM-System mit Lead-Scoring, automatischer Auswertung von Calls, vollständig digitalisiertes Vertrags-, Rechnungs- und Backoffice-Management. Zusätzlich automatisiertes Onboarding von Kunden und Mitarbeitern. Entwicklung von Echtzeit-Dashboards, für Abbildung sämtlicher Unternehmens-KPIs.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-8 border-t border-slate-200 flex items-center gap-5">
-                                <img src="https://onecdn.io/media/51c85131-0d9c-4c63-9047-9b1897fc96ad/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Maximilian Quos">
-                                <div>
-                                    <p class="text-slate-900 font-bold italic mb-1">"Die Jungs sind einfach Maschinen wenn es darum geht Systeme zu bauen die uns enorm nach vorne bringen."</p>
-                                    <div class="text-sm font-black text-slate-900">Maximilian Quos</div>
-                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Geschäftsführer</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-4">
-                            <div class="bg-blue-950 h-full min-h-[220px] rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
-                                <div class="relative z-10">
-                                    <div class="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-none">+ 100.000 €</div>
-                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">Mehrumsatz jeden Monat generiert während mehrmonatiger Begleitung und Betreuung.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 reveal shadow-premium">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-                        <div class="lg:col-span-8 flex flex-col justify-between">
-                            <div>
-                                <img src="https://onecdn.io/media/1709af8a-fec4-4ba3-8f33-8fb61460318c/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Erfolg mit Immobilien">
-                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Struktur für Projektentwickler "Erfolg mit Immobilien"</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-                                    <div>
-                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Herausforderung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Kein funktionierendes Vertriebssystem, zu wenig Vertriebspartner. Viele manuelle Abläufe, kein strukturiertes Onboarding, keine Auswertungen. Hoher Aufwand in Beratung und Finanzierungsvorbereitung.</p>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Lösung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Aufbau eines leistungsstarken CRMs mit klarer Struktur. Automatisierte Gewinnung neuer Vertriebspartner durch Lead-Scraping & Cold-Mailing-Kampagnen. Vollautomatisches Onboarding mit Vertragsversand, Follow-ups und Aufgabenmanagement. Zudem neuer Flow für Kundenselbstauskunft und Datenaufbereitung für Finanzierungen.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-8 border-t border-slate-200 flex items-center gap-5">
-                                <img src="https://onecdn.io/media/c6a231ef-c791-4900-b9d9-4176411951ba/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Chris Matthewes">
-                                <div>
-                                    <p class="text-slate-900 font-bold italic mb-1">"Mir war vorher nicht bewusst, was sich alles automatisieren lässt. Wir haben enorm an Effizienz und Geschwindigkeit in unserem Tagesgeschäft gewonnen"</p>
-                                    <div class="text-sm font-black text-slate-900">Chris Matthewes</div>
-                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Geschäftsführer</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-4">
-                            <div class="bg-blue-950 h-full min-h-[220px] rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
-                                <div class="relative z-10">
-                                    <div class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter leading-none">+ 50</div>
-                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">neue Vertriebspartner</p>
-                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs mt-3">Innerhalb von wenigen Monaten</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-slate-100 reveal shadow-premium">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-                        <div class="lg:col-span-8 flex flex-col justify-between">
-                            <div>
-                                <img src="https://onecdn.io/media/be720de7-eb26-45a9-9500-5598aa970ed7/md" class="h-10 md:h-12 mb-10 opacity-60 grayscale hover:grayscale-0 transition-all" alt="Online Steuerrechner">
-                                <h4 class="text-2xl md:text-4xl font-black mb-10 text-slate-900 leading-snug">Online Steuerrechner für Lead Generierung und Qualifizierung</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-                                    <div>
-                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Herausforderung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Zu viele unqualifizierte Leads.</p>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2">Lösung</h5>
-                                        <p class="text-sm md:text-base text-slate-500 font-light leading-relaxed">Entwicklung eines digitalen GmbH-Steuerrechners, der auf Basis der Nutzereingaben die individuellen steuerlichen Vorteile einer GmbH-Gründung berechnet. Dadurch entsteht ein wirkungsvolles Instrument zur Lead-Generierung und gleichzeitig zur Qualifizierung: Nur passende und ernsthafte Interessenten gelangen in das Erstgespräch.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-8 border-t border-slate-200 flex items-center gap-5">
-                                <img src="https://onecdn.io/media/408e3de6-aadb-4dda-ac15-cac20c38d29e/sm" class="w-16 h-16 rounded-2xl object-cover" alt="Lukas Janik">
-                                <div>
-                                    <p class="text-slate-900 font-bold italic mb-1">"Einfach nur starke Arbeit. Wir bekommen viel Lob von Steuerexperten aus der Branche und die Qualtität unserer Erstgespräche hat sich drastisch verbessert."</p>
-                                    <div class="text-sm font-black text-slate-900">Lukas Janik</div>
-                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Gründer</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-4">
-                            <div class="bg-blue-950 h-full min-h-[220px] rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
-                                <div class="relative z-10">
-                                    <div class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter leading-none">- 43 %</div>
-                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs">unqualifizierte Erstgespräche</p>
-                                    <p class="text-blue-300 font-bold uppercase tracking-widest text-[10px] md:text-xs mt-3">nach Einsatz des Rechners.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="py-24 md:py-40 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <div class="bg-slate-900 rounded-[3rem] md:rounded-[5rem] p-12 md:p-32 text-center shadow-2xl relative overflow-hidden reveal">
-                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1e40af20,transparent_50%)]"></div>
-                <div class="relative z-10 max-w-4xl mx-auto">
-                    <h2 class="text-2xl md:text-6xl lg:text-7xl font-black text-white mb-8 md:mb-12 tracking-tighter leading-[1.05]">Bereit für ein System, das skaliert?</h2>
-                    <p class="text-lg md:text-2xl text-slate-400 mb-12 md:mb-20 font-light leading-relaxed">Wenn du deine Agentur unabhängiger von Personalkosten machen und die Delivery beschleunigen willst, lass uns sprechen.</p>
-                    <div class="flex flex-col items-center gap-8">
-                        <a href="https://cal.com/leon-schmid-2lm8gc/30min-prozesse" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-6 bg-white text-slate-900 px-12 py-6 rounded-full font-black text-xl md:text-3xl transition-all active:scale-95 shadow-xl hover:bg-slate-50 group">
-                            Kostenlose AI-Analyse sichern
-                            <i data-lucide="arrow-right" class="w-8 h-8 group-hover:translate-x-2 transition-transform"></i>
-                        </a>
-                        <div class="text-slate-500 font-bold text-sm md:text-lg uppercase tracking-widest flex items-center gap-4">
-                            <i data-lucide="clock" class="text-blue-500 w-6 h-6"></i>
-                            30 Minuten. Wir zeigen dir, was bei dir mit AI möglich ist.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 md:py-24 bg-white border-t border-slate-100">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-                <div class="lg:col-span-2 flex flex-col gap-10">
-                    <div class="flex items-center gap-4">
-                        <img src="https://onecdn.io/media/1ab823e5-315d-4072-acef-8e6178d684c0/md2x" alt="Enablence" class="h-10 w-auto brightness-0">
-                        <span class="text-2xl font-black tracking-tighter text-slate-900 uppercase">ENABLENCE</span>
-                    </div>
-                    <p class="text-slate-500 text-lg md:text-xl font-light leading-relaxed max-w-md">Wir transformieren Agenturen durch modernste KI-Automatisierung in skalierbare Marktführer.</p>
-                </div>
-                <div>
-                    <h5 class="text-slate-900 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-8">Rechtliches</h5>
-                    <div class="flex flex-col gap-6 text-slate-500 font-medium">
-                        <a href="#" class="hover:text-blue-600 transition-colors">Impressum</a>
-                        <a href="#" class="hover:text-blue-600 transition-colors">Datenschutz</a>
-                    </div>
-                </div>
-                <div>
-                    <h5 class="text-slate-900 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-8">Kontakt</h5>
-                    <div class="flex flex-col gap-6 text-slate-500 font-medium">
-                        <div class="flex items-center gap-4"><i data-lucide="map-pin" class="text-blue-600 w-5 h-5"></i> Paphos, Zypern</div>
-                        <div class="flex items-center gap-4"><i data-lucide="mail" class="text-blue-600 w-5 h-5"></i> service@enablence.ai</div>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-12 border-t border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-[0.5em] text-center">
-                &copy; 2025 Enablence Ltd. Alle Rechte vorbehalten.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            const menuBtn = document.getElementById('menu-btn');
-            const closeBtn = document.getElementById('close-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            menuBtn.onclick = () => mobileMenu.classList.remove('hidden');
-            closeBtn.onclick = () => mobileMenu.classList.add('hidden');
-            mobileMenu.querySelectorAll('.mobile-nav-link').forEach(l => l.onclick = () => mobileMenu.classList.add('hidden'));
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('active');
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
-            const nav = document.getElementById('navbar');
-            window.onscroll = () => {
-                if (window.scrollY > 40) {
-                    nav.classList.add('glass', 'shadow-sm', 'py-3');
-                    nav.classList.remove('py-4', 'md:py-6');
-                } else {
-                    nav.classList.remove('glass', 'shadow-sm', 'py-3');
-                    nav.classList.add('py-4', 'md:py-6');
-                }
-            };
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      const menuBtn = document.getElementById('menu-btn');
+      const closeBtn = document.getElementById('close-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.onclick = () => mobileMenu.classList.add('is-open');
+      closeBtn.onclick = () => mobileMenu.classList.remove('is-open');
+      mobileMenu.querySelectorAll('.mobile-menu__link').forEach(l => l.onclick = () => mobileMenu.classList.remove('is-open'));
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('active');
         });
-    </script>
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+      const nav = document.getElementById('navbar');
+      window.onscroll = () => {
+        if (window.scrollY > 40) {
+          nav.classList.add('nav--compact');
+        } else {
+          nav.classList.remove('nav--compact');
+        }
+      };
+    });
+  </script>
 </body>
 </html>
